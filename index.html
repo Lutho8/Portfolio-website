@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lutho Kote - Senior Community Manager</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3176FF',secondary:'#666666'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+background: #ffffff;
+color: #333333;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 1px;
+bottom: -2px;
+left: 0;
+background-color: #333;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.cursor-dot {
+width: 8px;
+height: 8px;
+background-color: #333;
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+z-index: 9999;
+transform: translate(-50%, -50%);
+transition: transform 0.1s ease;
+}
+.cursor-outline {
+width: 40px;
+height: 40px;
+border: 1px solid rgba(51, 51, 51, 0.5);
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+z-index: 9998;
+transform: translate(-50%, -50%);
+transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+}
+.interactive:hover ~ .cursor-outline {
+width: 60px;
+height: 60px;
+background-color: rgba(51, 51, 51, 0.05);
+}
+.portfolio-item {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.portfolio-overlay {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.portfolio-item:hover .portfolio-overlay {
+opacity: 1;
+}
+input, textarea {
+outline: none;
+transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus {
+border-color: #333;
+}
+.social-icon {
+transition: transform 0.3s ease;
+}
+.social-icon:hover {
+transform: translateY(-3px);
+}
+.scroll-indicator {
+animation: bounce 2s infinite;
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-10px);
+}
+60% {
+transform: translateY(-5px);
+}
+}
+.back-to-top {
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.back-to-top.visible {
+opacity: 1;
+visibility: visible;
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 34px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #333;
+}
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+.brand-focus .portfolio-item[data-category="campaigns"],
+.brand-focus .portfolio-item[data-category="webinars"] {
+order: -1;
+}
+.brand-focus .portfolio-filter[data-filter="campaigns"],
+.brand-focus .portfolio-filter[data-filter="webinars"] {
+order: -1;
+}
+.brand-focus .portfolio-item {
+transition: transform 0.5s ease, opacity 0.3s ease;
+}
+.brand-focus .portfolio-item[data-category="in-person"] {
+opacity: 0.7;
+}
+.brand-focus .portfolio-item[data-category="in-person"]:hover {
+opacity: 1;
+}
+.nav-bg {
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+background-color: rgba(255, 255, 255, 0.8);
+transition: background-color 0.3s ease;
+}
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.mobile-menu {
+transform: translateX(100%);
+transition: transform 0.3s ease;
+}
+.mobile-menu.open {
+transform: translateX(0);
+}
+.custom-checkbox {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+border-color: #ccc;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #333;
+border-color: #333;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 7px;
+top: 3px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.dark-mode .checkmark {
+background-color: #1e1e1e;
+border-color: #333;
+}
+.dark-mode .custom-checkbox:hover input ~ .checkmark {
+border-color: #444;
+}
+.dark-mode .custom-checkbox input:checked ~ .checkmark {
+background-color: #f5f5f5;
+border-color: #f5f5f5;
+}
+.dark-mode .custom-checkbox .checkmark:after {
+border-color: #121212;
+}
+</style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen">
+<div class="cursor-dot hidden md:block"></div>
+<div class="cursor-outline hidden md:block"></div>
+<!-- Header/Navigation -->
+<header class="fixed w-full top-0 z-50">
+<div class="nav-bg py-4 px-6 md:px-12 bg-white/80">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<a href="#" class="text-xl font-['Pacifico'] text-primary interactive">Lutho</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#about" class="nav-link text-sm font-medium interactive" data-i18n="about">About</a>
+<a href="#work" class="nav-link text-sm font-medium interactive" data-i18n="work">Work</a>
+<a href="#contact" class="nav-link text-sm font-medium interactive" data-i18n="contact">Contact</a>
+<div class="flex items-center ml-4">
+<span class="mr-2 text-xs">Community</span>
+<label class="switch">
+<input type="checkbox" id="focus-toggle">
+<span class="slider"></span>
+</label>
+<span class="ml-2 text-xs">Brand</span>
+</div>
+<!-- Language Toggle -->
+<div class="ml-6">
+<button id="lang-toggle" class="px-3 py-1 bg-gray-200 rounded-full text-xs font-medium interactive">DE</button>
+</div>
+</nav>
+<button class="md:hidden interactive w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden dark:bg-gray-900">
+<div class="p-6">
+<div class="flex justify-end mb-8">
+<button class="interactive w-10 h-10 flex items-center justify-center" id="close-menu-button">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<nav class="flex flex-col space-y-6">
+<a href="#about" class="text-lg font-medium interactive mobile-link">About</a>
+<a href="#work" class="text-lg font-medium interactive mobile-link">Work</a>
+<a href="#contact" class="text-lg font-medium interactive mobile-link">Contact</a>
+<div class="flex items-center mt-4">
+<span class="mr-2 text-xs">Community</span>
+<label class="switch">
+<input type="checkbox" id="mobile-focus-toggle">
+<span class="slider"></span>
+</label>
+<span class="ml-2 text-xs">Brand</span>
+</div>
+</nav>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center pt-20 pb-10 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="text-left fade-in order-2 md:order-1">
+<div class="mb-8">
+<span class="inline-block px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium mb-6">Senior Community Manager</span>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight interactive leading-tight">
+Building <span class="text-primary">Thriving Communities</span> That Drive Business Growth
+</h1>
+<p class="text-lg text-gray-600 mb-8 leading-relaxed">
+Strategic community professional with 8+ years of experience building engaged communities, driving user growth, and fostering meaningful connections that deliver measurable business impact for global brands.
+</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<a href="#contact" class="px-8 py-4 bg-primary text-white font-medium rounded-button transition-all hover:bg-opacity-90 interactive whitespace-nowrap text-center">View Resume</a>
+<a href="#work" class="px-8 py-4 border-2 border-gray-200 text-gray-700 font-medium rounded-button transition-all hover:border-primary hover:text-primary interactive whitespace-nowrap text-center">See My Impact</a>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex -space-x-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20young%20diverse%20business%20person%20smiling%20confidently%20at%20camera%2C%20clean%20business%20attire%2C%20neutral%20background&width=100&height=100&seq=21&orientation=squarish" class="w-12 h-12 rounded-full border-2 border-white" alt="Client">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20middle%20aged%20business%20woman%20smiling%20warmly%20at%20camera%2C%20clean%20business%20attire%2C%20neutral%20background&width=100&height=100&seq=22&orientation=squarish" class="w-12 h-12 rounded-full border-2 border-white" alt="Client">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20mature%20business%20man%20smiling%20confidently%20at%20camera%2C%20clean%20business%20attire%2C%20neutral%20background&width=100&height=100&seq=23&orientation=squarish" class="w-12 h-12 rounded-full border-2 border-white" alt="Client">
+</div>
+<div>
+<div class="flex items-center gap-1 text-primary font-semibold">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-sm text-gray-600">Trusted by 50+ brands worldwide</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 fade-in">
+  <div class="relative flex justify-center">
+    <img src="portrait-lutho-kote.png" alt="Lutho Kote" class="rounded-full border-4 border-primary shadow-2xl w-64 h-64 object-cover mx-auto">
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="md:flex md:items-center md:space-x-12 lg:space-x-20">
+<div class="md:w-5/12 mb-10 md:mb-0 fade-in">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20male%20community%20manager%20in%20his%2030s%20with%20confident%20expression%2C%20business%20casual%20attire%2C%20looking%20directly%20at%20camera%2C%20soft%20natural%20lighting%2C%20clean%20background%2C%20high%20quality%20professional%20headshot&width=600&height=800&seq=1&orientation=portrait" alt="Lutho Kote" class="rounded-lg shadow-lg w-full h-auto object-cover">
+</div>
+<div class="md:w-7/12 fade-in">
+<h2 class="text-3xl font-bold mb-6 interactive">About Me</h2>
+<p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+I'm a results-driven Senior Community Manager with over 8 years of experience in building and scaling online communities for global brands. Currently serving as Community Manager at Fintiba, I specialize in developing engagement strategies, fostering user growth, and creating impactful community programs that align with business objectives.
+</p>
+<p class="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+My approach combines data-driven decision making with deep empathy for user needs. I excel in cross-functional collaboration, working seamlessly with product, marketing, and support teams to create cohesive community experiences that drive measurable results and brand loyalty.
+</p>
+<div class="mb-8">
+<h3 class="text-lg font-semibold mb-4 interactive">Core Competencies</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-gray-700 dark:text-gray-300">Community Strategy</span>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-gray-700 dark:text-gray-300">Brand Community Building</span>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-gray-700 dark:text-gray-300">Program Management</span>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-gray-700 dark:text-gray-300">Content Strategy</span>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-gray-700 dark:text-gray-300">Analytics & Reporting</span>
+</div>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-gray-700 dark:text-gray-300">Cross-team Collaboration</span>
+</div>
+</div>
+</div>
+<a href="#work" class="inline-block px-6 py-3 bg-primary text-white font-medium rounded-button transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View My Work</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Work/Portfolio Section -->
+<section id="work" class="py-20">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-3xl font-bold mb-4 interactive">Featured Community Initiatives</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+Showcasing impactful community events, webinars, and marketing initiatives that bring people together and create meaningful connections for brand growth.
+</p>
+</div>
+<div class="mb-10 fade-in">
+<div class="flex flex-wrap justify-center gap-3 mb-12">
+<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter active whitespace-nowrap" data-filter="all">All Initiatives</button>
+<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter whitespace-nowrap" data-filter="in-person">In-Person Events</button>
+<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter whitespace-nowrap" data-filter="webinars">Webinars</button>
+<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter whitespace-nowrap" data-filter="campaigns">Community Campaigns</button>
+</div>
+</div>
+<div class="max-w-4xl mx-auto mb-16 fade-in">
+<div class="relative rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=professional%20tech%20conference%20or%20community%20event%20with%20engaged%20audience%2C%20modern%20venue%20setup%2C%20speaker%20on%20stage%2C%20high-quality%20event%20photography%2C%20warm%20lighting%2C%20professional%20atmosphere&width=1280&height=720&seq=8&orientation=landscape" alt="Featured Community Event" class="w-full h-auto">
+<div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+<button class="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center text-primary hover:bg-opacity-100 transition-all interactive">
+<i class="ri-play-fill ri-2x"></i>
+</button>
+</div>
+</div>
+<div class="text-center mt-6">
+<h3 class="text-lg font-semibold mb-2">Fintiba Community Summit 2024</h3>
+<p class="text-gray-600 dark:text-gray-300">Annual flagship event bringing together international students and industry leaders</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+<!-- Portfolio Item 1 -->
+<div class="portfolio-item rounded-lg overflow-hidden bg-gray-800/30 shadow-md fade-in" data-category="in-person">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=tech%20meetup%20or%20workshop%20with%20diverse%20group%20of%20people%20collaborating%2C%20modern%20office%20or%20event%20space%2C%20interactive%20session%2C%20professional%20event%20photography%2C%20natural%20lighting&width=600&height=450&seq=9&orientation=landscape" alt="Student Success Workshop Series" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
+<div class="text-center">
+<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">In-Person Events</span>
+<h3 class="text-white text-lg font-semibold mb-2">Student Success Workshop Series</h3>
+<p class="text-gray-200 text-sm mb-4">Monthly career development workshops</p>
+<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Event</a>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-semibold mb-2">Student Success Workshop Series</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Monthly career development workshops</p>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="webinars">
+  <div class="relative">
+    <div class="swiper webinars-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="webinar1.png" alt="Webinar 1" class="w-full h-64 object-cover object-top">
+        </div>
+        <div class="swiper-slide">
+          <img src="webinar2.png" alt="Webinar 2" class="w-full h-64 object-cover object-top">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
+      <div class="text-center">
+        <span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Webinars</span>
+        <h3 class="text-white text-lg font-semibold mb-2">Webinar Highlights</h3>
+        <p class="text-gray-200 text-sm mb-4">Impressionen aus vergangenen Webinaren / Highlights from past webinars</p>
+      </div>
+    </div>
+  </div>
+  <div class="p-6">
+    <h3 class="text-lg font-semibold mb-2">Webinar Highlights</h3>
+    <p class="text-gray-600 dark:text-gray-300 text-sm">Impressionen aus vergangenen Webinaren / Highlights from past webinars</p>
+  </div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="campaigns">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=social%20media%20community%20campaign%20collage%2C%20user%20generated%20content%2C%20community%20engagement%20posts%2C%20hashtag%20campaign%20visuals%2C%20professional%20social%20media%20marketing%20presentation&width=600&height=450&seq=11&orientation=landscape" alt="Community Growth Campaign" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
+<div class="text-center">
+<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Community Campaigns</span>
+<h3 class="text-white text-lg font-semibold mb-2">#StudyAbroadSuccess Campaign</h3>
+<p class="text-gray-200 text-sm mb-4">User-generated content initiative</p>
+<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Campaign</a>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-semibold mb-2">#StudyAbroadSuccess Campaign</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">User-generated content initiative</p>
+</div>
+</div>
+<!-- Portfolio Item 4 -->
+<div class="portfolio-item rounded-lg overflow-hidden bg-gray-800/30 shadow-md fade-in" data-category="in-person">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=tech%20networking%20event%20or%20mixer%20with%20professionals%20networking%2C%20casual%20business%20atmosphere%2C%20modern%20venue%2C%20evening%20event%20lighting%2C%20professional%20event%20photography&width=600&height=450&seq=12&orientation=landscape" alt="Alumni Networking Events" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
+<div class="text-center">
+<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">In-Person Events</span>
+<h3 class="text-white text-lg font-semibold mb-2">Alumni Networking Events</h3>
+<p class="text-gray-200 text-sm mb-4">Quarterly networking meetups</p>
+<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Event</a>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-semibold mb-2">Alumni Networking Events</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Quarterly networking meetups</p>
+</div>
+</div>
+<!-- Portfolio Item 5 -->
+<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="webinars">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=online%20workshop%20or%20masterclass%20with%20interactive%20elements%2C%20virtual%20whiteboard%2C%20participant%20engagement%2C%20professional%20online%20teaching%20setup%2C%20clean%20educational%20presentation&width=600&height=450&seq=13&orientation=landscape" alt="Community Leadership Workshop" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
+<div class="text-center">
+<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Webinars</span>
+<h3 class="text-white text-lg font-semibold mb-2">Community Leadership Workshop</h3>
+<p class="text-gray-200 text-sm mb-4">Virtual training series</p>
+<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">Watch Recording</a>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-semibold mb-2">Community Leadership Workshop</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Virtual training series</p>
+</div>
+</div>
+<!-- Portfolio Item 6 -->
+<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="campaigns">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=community%20mentorship%20program%20showcase%2C%20diverse%20group%20mentoring%20session%2C%20professional%20development%20workshop%2C%20collaborative%20learning%20environment%2C%20modern%20office%20setting&width=600&height=450&seq=14&orientation=landscape" alt="Mentorship Program" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
+<div class="text-center">
+<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Community Campaigns</span>
+<h3 class="text-white text-lg font-semibold mb-2">Student Mentorship Program</h3>
+<p class="text-gray-200 text-sm mb-4">6-month community mentorship initiative</p>
+<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Program</a>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-semibold mb-2">Student Mentorship Program</h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm">6-month community mentorship initiative</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-12 fade-in">
+<a href="#" class="inline-block px-6 py-3 border border-gray-300 dark:border-gray-600 text-primary font-medium rounded-button transition-all hover:bg-gray-50 dark:hover:bg-gray-800 interactive whitespace-nowrap">View All Projects</a>
+</div>
+</div>
+</section>
+<!-- Videos Section -->
+<section id="videos" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6 md:px-12">
+    <div class="text-center mb-12 fade-in">
+      <h2 class="text-3xl font-bold mb-4 interactive" data-i18n="videos">Videos</h2>
+      <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto" data-i18n="videos_desc">
+        Sehen Sie sich meine neuesten Community- und Webinar-Videos an. / Watch my latest community and webinar videos.
+      </p>
+    </div>
+    <div class="flex justify-center fade-in">
+      <div class="w-full max-w-2xl aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-72 md:h-96 rounded-xl shadow-lg" src="https://www.youtube.com/embed/jbTn5hWfDD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Videos Section -->
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="max-w-3xl mx-auto px-6 md:px-12">
+<div class="text-center mb-12 fade-in">
+<h2 class="text-3xl font-bold mb-4 interactive">Let's Connect</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+Looking for a senior community manager who can drive engagement and growth for your brand? I'm excited to discuss how my experience can benefit your team and community.
+</p>
+</div>
+<form class="fade-in">
+<div class="mb-6">
+<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all" placeholder="Your name">
+</div>
+<div class="mb-6">
+<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all" placeholder="Your email address">
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all" placeholder="What is this regarding?">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all resize-none" placeholder="Tell me about your project..."></textarea>
+</div>
+<div class="mb-8">
+<label class="custom-checkbox interactive">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="text-sm text-gray-600 dark:text-gray-300">I agree to receive occasional updates about new projects and availability.</span>
+</label>
+</div>
+<div class="text-center">
+<button type="submit" class="px-8 py-3 bg-primary text-white font-medium rounded-button transition-all hover:bg-opacity-90 interactive whitespace-nowrap">Send Message</button>
+</div>
+</form>
+<div class="mt-16 text-center fade-in">
+<p class="text-gray-600 dark:text-gray-300 mb-6">Or reach out directly at:</p>
+<a href="mailto:lutho.kote@relicom.de" class="text-primary font-medium hover:underline interactive">lutho.kote@relicom.de</a>
+<div class="flex justify-center mt-8 space-x-6">
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
+<i class="ri-twitter-line ri-lg"></i>
+</a>
+<a href="https://www.linkedin.com/in/lutho-kote-%F0%9F%9A%80-3617a61a0/" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
+<i class="ri-linkedin-line ri-lg"></i>
+</a>
+<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
+<i class="ri-global-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners Section -->
+<section id="partners" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="text-center mb-10 fade-in">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 interactive" data-i18n="partners">Partner</h2>
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-i18n="partners_desc">
+        Ich habe mit führenden Organisationen zusammengearbeitet / I have worked with leading organizations:
+      </p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center justify-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Goethe-Institut_Logo_2011.svg" alt="Goethe Institut Logo" class="h-12 mx-auto">
+      <img src="https://www.mawista.com/wp-content/uploads/2021/09/mawista-logo.svg" alt="Mawista Logo" class="h-12 mx-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Coat_of_arms_of_South_Africa_%28heraldic%29.svg" alt="South African Embassy Logo" class="h-12 mx-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Barmer_Logo_2017.svg" alt="BARMER Logo" class="h-12 mx-auto">
+      <img src="https://www.chancenkarte.de/wp-content/uploads/2023/06/chancenkarte-logo.svg" alt="Chancenkarte Logo" class="h-12 mx-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/HousingAnywhere_logo.svg" alt="HousingAnywhere Logo" class="h-12 mx-auto">
+      <img src="https://www.spacest.com/wp-content/uploads/2022/09/spacest-logo.svg" alt="Spacest Logo" class="h-12 mx-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/NIO_Logo.svg" alt="NIO Logo" class="h-12 mx-auto">
+    </div>
+  </div>
+</section>
+<!-- End Partners Section -->
+<!-- Footer -->
+<footer class="py-12 bg-gray-100">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center fade-in">
+<a href="#" class="text-xl font-['Pacifico'] text-primary mb-6 inline-block interactive">Lutho</a>
+<div class="flex justify-center space-x-8 mb-8">
+<a href="#about" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">About</a>
+<a href="#work" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Work</a>
+<a href="#contact" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Contact</a>
+<a href="#" id="privacy-link" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Privacy Policy</a>
+<a href="#" id="terms-link" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Terms & Conditions</a>
+</div>
+<div class="flex justify-center mt-4 mb-8">
+<a href="https://www.linkedin.com/in/lutho-kote-%F0%9F%9A%80-3617a61a0/" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive" target="_blank" rel="noopener" aria-label="LinkedIn">
+<i class="ri-linkedin-line ri-lg"></i>
+</a>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">
+&copy; 2025 Lutho Kote. All rights reserved.
+</p>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button class="back-to-top fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:bg-opacity-90 interactive">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<!-- Privacy Policy Modal -->
+<div id="privacy-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg maxw-lg w-full p-8 relative">
+    <button id="close-privacy" class="absolute top-4 right-4 text-gray-500 hover:text-primary"><i class="ri-close-line ri-lg"></i></button>
+    <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+    <p class="text-gray-700 mb-2">This is a placeholder for your privacy policy. Please update with your actual privacy practices and data handling information.</p>
+  </div>
+</div>
+<!-- Terms & Conditions Modal -->
+<div id="terms-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg maxw-lg w-full p-8 relative">
+    <button id="close-terms" class="absolute top-4 right-4 text-gray-500 hover:text-primary"><i class="ri-close-line ri-lg"></i></button>
+    <h2 class="text-2xl font-bold mb-4">Terms & Conditions</h2>
+    <p class="text-gray-700 mb-2">This is a placeholder for your terms and conditions. Please update with your actual terms of use and legal information.</p>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Custom cursor
+const cursor = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
+if (cursor && cursorOutline) {
+document.addEventListener('mousemove', function(e) {
+cursor.style.left = e.clientX + 'px';
+cursor.style.top = e.clientY + 'px';
+cursorOutline.style.left = e.clientX + 'px';
+cursorOutline.style.top = e.clientY + 'px';
+});
+}
+// Interactive elements hover effect
+const interactiveElements = document.querySelectorAll('.interactive');
+interactiveElements.forEach(element => {
+element.addEventListener('mouseenter', function() {
+if (cursorOutline) {
+cursorOutline.style.width = '60px';
+cursorOutline.style.height = '60px';
+cursorOutline.style.backgroundColor = 'rgba(51, 51, 51, 0.05)';
+}
+});
+element.addEventListener('mouseleave', function() {
+if (cursorOutline) {
+cursorOutline.style.width = '40px';
+cursorOutline.style.height = '40px';
+cursorOutline.style.backgroundColor = 'transparent';
+}
+});
+});
+// Fade in animations
+const fadeElements = document.querySelectorAll('.fade-in');
+const fadeInObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+fadeInObserver.unobserve(entry.target);
+}
+});
+}, {
+threshold: 0.1
+});
+fadeElements.forEach(element => {
+fadeInObserver.observe(element);
+});
+// Back to top button
+const backToTopButton = document.querySelector('.back-to-top');
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.add('visible');
+} else {
+backToTopButton.classList.remove('visible');
+}
+});
+backToTopButton.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+// Mobile menu
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const closeMenuButton = document.getElementById('close-menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.add('open');
+});
+closeMenuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('open');
+});
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.remove('open');
+});
+});
+// Portfolio filtering
+const portfolioFilters = document.querySelectorAll('.portfolio-filter');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+portfolioFilters.forEach(filter => {
+filter.addEventListener('click', function() {
+// Remove active class from all filters
+portfolioFilters.forEach(f => f.classList.remove('active', 'bg-primary', 'text-white'));
+portfolioFilters.forEach(f => f.classList.add('bg-gray-100', 'dark:bg-gray-800'));
+// Add active class to clicked filter
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('bg-gray-100', 'dark:bg-gray-800');
+const filterValue = this.getAttribute('data-filter');
+portfolioItems.forEach(item => {
+if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+item.style.display = 'block';
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+// Focus mode toggle
+const focusToggle = document.getElementById('focus-toggle');
+const mobileFocusToggle = document.getElementById('mobile-focus-toggle');
+const portfolioSection = document.getElementById('work');
+// Check for saved focus preference
+const savedFocus = localStorage.getItem('focus');
+if (savedFocus === 'brand') {
+portfolioSection.classList.add('brand-focus');
+focusToggle.checked = true;
+mobileFocusToggle.checked = true;
+} else {
+portfolioSection.classList.remove('brand-focus');
+focusToggle.checked = false;
+mobileFocusToggle.checked = false;
+}
+function toggleFocus() {
+portfolioSection.classList.toggle('brand-focus');
+if (portfolioSection.classList.contains('brand-focus')) {
+localStorage.setItem('focus', 'brand');
+} else {
+localStorage.setItem('focus', 'community');
+}
+}
+focusToggle.addEventListener('change', function() {
+toggleFocus();
+mobileFocusToggle.checked = this.checked;
+});
+mobileFocusToggle.addEventListener('change', function() {
+toggleFocus();
+focusToggle.checked = this.checked;
+});
+// Animated text
+const animatedText = document.getElementById('animated-text');
+if (animatedText) {
+const text = animatedText.textContent;
+animatedText.textContent = '';
+for (let i = 0; i < text.length; i++) {
+const span = document.createElement('span');
+span.textContent = text[i];
+span.style.opacity = '0';
+span.style.transition = `opacity 0.3s ease ${i * 0.05}s`;
+animatedText.appendChild(span);
+}
+setTimeout(() => {
+const spans = animatedText.querySelectorAll('span');
+spans.forEach(span => {
+span.style.opacity = '1';
+});
+}, 500);
+}
+// Language toggle logic
+const translations = {
+  de: {
+    about: 'Über mich',
+    work: 'Arbeit',
+    contact: 'Kontakt',
+    // Add more keys as needed
+  },
+  en: {
+    about: 'About',
+    work: 'Work',
+    contact: 'Contact',
+    // Add more keys as needed
+  }
+};
+let currentLang = 'en';
+const langToggle = document.getElementById('lang-toggle');
+function updateLanguage(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+  langToggle.textContent = lang === 'en' ? 'DE' : 'EN';
+  currentLang = lang;
+}
+langToggle.addEventListener('click', function() {
+  updateLanguage(currentLang === 'en' ? 'de' : 'en');
+});
+// Set initial language
+updateLanguage(currentLang);
+// SwiperJS for Webinars
+if (document.querySelector('.webinars-swiper')) {
+  new Swiper('.webinars-swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+// Privacy Policy and Terms modal logic
+const privacyLink = document.getElementById('privacy-link');
+const termsLink = document.getElementById('terms-link');
+const privacyModal = document.getElementById('privacy-modal');
+const termsModal = document.getElementById('terms-modal');
+const closePrivacy = document.getElementById('close-privacy');
+const closeTerms = document.getElementById('close-terms');
+privacyLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  privacyModal.classList.remove('hidden');
+});
+termsLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  termsModal.classList.remove('hidden');
+});
+closePrivacy.addEventListener('click', function() {
+  privacyModal.classList.add('hidden');
+});
+closeTerms.addEventListener('click', function() {
+  termsModal.classList.add('hidden');
+});
+// Close modals on outside click
+privacyModal.addEventListener('click', function(e) {
+  if (e.target === privacyModal) privacyModal.classList.add('hidden');
+});
+termsModal.addEventListener('click', function(e) {
+  if (e.target === termsModal) termsModal.classList.add('hidden');
+});
+});
+</script>
+</body>
+</html> 
