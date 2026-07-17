@@ -3,939 +3,940 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lutho Kote - Senior Community Manager</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#3176FF',secondary:'#666666'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<title>Lutho Kote — Community & Brand Manager | The Brand, Run Like a Company</title>
+<meta name="description" content="Lutho Kote — Community & Brand Manager with 5 years of experience. Leading webinars, customer referral and ambassador programs at Fintiba. English & German (C1).">
+<meta property="og:title" content="Lutho Kote — Community & Brand Manager">
+<meta property="og:description" content="One person, run like a company. Community building, webinars, referral programs, KOL management — in English and German.">
+<meta property="og:image" content="portrait-lutho-kote.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A1128'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%234C9AFF' font-family='Arial' font-weight='bold'>LK</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-body {
-font-family: 'Inter', sans-serif;
-scroll-behavior: smooth;
-background: #ffffff;
-color: #333333;
+:root{
+  --ink:#0A1128;         /* deep navy */
+  --ink-2:#101A3E;
+  --paper:#F7F6F2;       /* warm off-white */
+  --card:#FFFFFF;
+  --accent:#2563EB;      /* electric blue */
+  --accent-soft:#E4EDFF;
+  --gold:#C8A24A;
+  --muted:#5B6478;
+  --line:#E3E1DA;
+  --radius:18px;
 }
-.nav-link {
-position: relative;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.kicker::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
+.h2{font-size:clamp(30px,4.2vw,46px);font-weight:700;line-height:1.12;margin-bottom:16px}
+.lead{font-size:18px;color:var(--muted);max-width:640px}
+/* ---------- nav ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
+header.scrolled{background:rgba(247,246,242,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo .mark{width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:13px;letter-spacing:0}
+.logo .mark span{color:#7FB2FF}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:14px;font-weight:500;color:var(--ink);opacity:.75;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--accent)}
+.lang-switch{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:#fff}
+.lang-switch button{border:0;background:transparent;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;color:var(--muted);font-family:'Space Grotesk'}
+.lang-switch button.active{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:99px;font-weight:600;font-size:15px;transition:.25s;cursor:pointer;border:0}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,99,235,.36)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-sm{padding:9px 18px;font-size:13px}
+.burger{display:none;background:none;border:0;font-size:26px;cursor:pointer;color:var(--ink)}
+.mobile-menu{position:fixed;inset:0;background:var(--ink);color:#fff;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateY(-100%);transition:.4s cubic-bezier(.7,0,.3,1)}
+.mobile-menu.open{transform:translateY(0)}
+.mobile-menu a{font-family:'Space Grotesk';font-size:26px;font-weight:600}
+.mobile-menu .close{position:absolute;top:24px;right:24px;font-size:30px;background:none;border:0;color:#fff;cursor:pointer}
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:140px 0 80px}
+.hero::before{content:"";position:absolute;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.35),transparent 65%);top:-260px;right:-180px}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:99px;font-size:13px;font-weight:500;margin-bottom:26px}
+.hero .badge .dot{width:8px;height:8px;border-radius:50%;background:#4ADE80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:700;line-height:1.05;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:#7FB2FF}
+.hero p.sub{font-size:18px;color:rgba(255,255,255,.72);max-width:560px;margin-bottom:34px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.hero .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:620px}
+.kpi{border-left:2px solid rgba(255,255,255,.18);padding-left:16px}
+.kpi b{font-family:'Space Grotesk';font-size:30px;font-weight:700;display:block;color:#fff}
+.kpi span{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4;display:block}
+.portrait-wrap{position:relative;justify-self:center}
+.portrait-wrap .frame{width:min(360px,80vw);aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 40px 80px rgba(0,0,0,.45);position:relative}
+.portrait-wrap img{width:100%;height:100%;object-fit:cover}
+.portrait-wrap .chip{position:absolute;background:#fff;color:var(--ink);border-radius:14px;padding:12px 16px;font-size:13px;font-weight:600;box-shadow:0 16px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:10px;animation:float 5s ease-in-out infinite}
+.portrait-wrap .chip small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+.chip.c1{top:26px;left:-64px}
+.chip.c2{bottom:70px;right:-58px;animation-delay:1.2s}
+.chip.c3{bottom:-20px;left:-30px;animation-delay:2.2s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.chip .ico{width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:16px}
+/* marquee */
+.marquee{background:var(--ink);border-top:1px solid rgba(255,255,255,.1);padding:18px 0;overflow:hidden;color:rgba(255,255,255,.55)}
+.marquee .track{display:flex;gap:56px;white-space:nowrap;animation:scroll 30s linear infinite;font-family:'Space Grotesk';font-size:14px;font-weight:500}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* ---------- company ---------- */
+.company .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.mission-card{background:var(--ink);color:#fff;border-radius:var(--radius);padding:38px;margin-top:8px}
+.mission-card h3{font-size:20px;margin-bottom:12px;color:#7FB2FF}
+.mission-card p{color:rgba(255,255,255,.78);font-size:15px}
+.pillars{display:grid;gap:14px;margin-top:26px}
+.pillar{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;transition:.25s}
+.pillar:hover{transform:translateX(6px);border-color:var(--accent)}
+.pillar .n{font-family:'Space Grotesk';font-weight:700;color:var(--accent);font-size:15px;min-width:30px}
+.pillar b{display:block;font-family:'Space Grotesk';font-size:16px;margin-bottom:3px}
+.pillar span{font-size:14px;color:var(--muted)}
+/* ---------- org chart ---------- */
+.org{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.org-chart{margin-top:56px}
+.ceo-card{max-width:420px;margin:0 auto;background:var(--ink);color:#fff;border-radius:var(--radius);padding:26px 30px;text-align:center;position:relative;box-shadow:0 24px 50px rgba(10,17,40,.25)}
+.ceo-card img{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:2px solid #7FB2FF}
+.ceo-card b{font-family:'Space Grotesk';font-size:19px;display:block}
+.ceo-card span{font-size:13px;color:rgba(255,255,255,.65)}
+.org-stem{width:2px;height:44px;background:var(--line);margin:0 auto}
+.org-rail{height:2px;background:var(--line);margin:0 7%;position:relative}
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.dept{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+.dept::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:.3s}
+.dept:hover::before,.dept.open::before{transform:scaleX(1)}
+.dept:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(10,17,40,.1)}
+.dept .ico{width:46px;height:46px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:21px;margin-bottom:16px}
+.dept h3{font-size:17px;margin-bottom:6px}
+.dept .role{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+.dept p{font-size:14px;color:var(--muted)}
+.dept .more{font-size:13px;font-weight:600;color:var(--accent);margin-top:14px;display:inline-flex;align-items:center;gap:6px}
+.dept ul{list-style:none;margin-top:14px;display:none}
+.dept.open ul{display:block}
+.dept ul li{font-size:13.5px;color:var(--ink);padding:7px 0 7px 22px;position:relative;border-top:1px dashed var(--line)}
+.dept ul li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
+/* ---------- programs ---------- */
+.programs .prog-grid{display:grid;gap:26px;margin-top:54px}
+.prog{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-height:340px}
+.prog:nth-child(even) .prog-media{order:2}
+.prog-media{position:relative;background:var(--ink);min-height:260px}
+.prog-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.prog-media .tag{position:absolute;top:18px;left:18px;background:#fff;color:var(--ink);font-size:12px;font-weight:700;padding:7px 14px;border-radius:99px;z-index:3;font-family:'Space Grotesk'}
+.prog-media .lead-tag{background:var(--gold);color:#fff}
+.prog-body{padding:40px}
+.prog-body h3{font-size:24px;margin-bottom:12px}
+.prog-body p{font-size:15px;color:var(--muted);margin-bottom:18px}
+.prog-body .facts{display:flex;flex-wrap:wrap;gap:8px}
+.fact{font-size:12.5px;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:6px 13px;border-radius:99px}
+.slider{position:absolute;inset:0}
+.slider img{opacity:0;transition:opacity .8s}
+.slider img.on{opacity:1}
+.slider .dots{position:absolute;bottom:14px;left:18px;display:flex;gap:6px;z-index:3}
+.slider .dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer}
+.slider .dots i.on{background:#fff}
+/* ---------- capabilities ---------- */
+.caps{background:var(--ink);color:#fff}
+.caps .h2{color:#fff}
+.caps .lead{color:rgba(255,255,255,.65)}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.cap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px;transition:.3s}
+.cap:hover{background:rgba(255,255,255,.09);transform:translateY(-4px)}
+.cap b{font-family:'Space Grotesk';font-size:16px;display:block;margin-bottom:8px;color:#7FB2FF}
+.cap p{font-size:13.5px;color:rgba(255,255,255,.66)}
+.lang-band{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.lang-card{border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:18px}
+.lang-card .flag{font-size:30px}
+.lang-card b{font-family:'Space Grotesk';display:block}
+.lang-card span{font-size:13px;color:rgba(255,255,255,.6)}
+.lang-card .bar{flex:1;height:6px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin-left:auto;max-width:160px}
+.lang-card .bar i{display:block;height:100%;background:linear-gradient(90deg,#2563EB,#7FB2FF);border-radius:99px}
+/* ---------- video ---------- */
+.video-frame{margin-top:48px;border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 70px rgba(10,17,40,.18);aspect-ratio:16/9;max-width:860px;margin-left:auto;margin-right:auto}
+.video-frame iframe{width:100%;height:100%;border:0;display:block}
+/* ---------- partners ---------- */
+.partners{background:#fff;border-top:1px solid var(--line)}
+.partner-grid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:44px}
+.partner{font-family:'Space Grotesk';font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:13px 26px;color:var(--muted);transition:.25s}
+.partner:hover{border-color:var(--accent);color:var(--ink);transform:translateY(-3px)}
+/* ---------- contact ---------- */
+.contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.contact-info .item{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start}
+.contact-info .ico{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.contact-info b{display:block;font-family:'Space Grotesk';font-size:15px}
+.contact-info a,.contact-info span{font-size:14px;color:var(--muted)}
+.contact-info a:hover{color:var(--accent)}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}
+.field input,.field textarea,.field select{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font-family:'Inter';font-size:14.5px;background:#fff;transition:.2s;color:var(--ink)}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(37,99,235,.1)}
+.form-note{font-size:12.5px;color:var(--muted);margin:14px 0 20px}
+.form-success{display:none;background:#E8F8EE;border:1px solid #7FD8A0;color:#166534;border-radius:12px;padding:16px 20px;font-size:14.5px;margin-top:18px}
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.65);padding:60px 0 36px}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:44px}
+.foot .logo{color:#fff}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+.foot-links a{font-size:14px;transition:.2s}
+.foot-links a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px}
+.foot-bottom a{color:rgba(255,255,255,.4)}
+.foot-bottom a:hover{color:#fff}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(10,17,40,.6);backdrop-filter:blur(4px);z-index:300;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.show{display:flex}
+.modal .box{background:#fff;color:var(--ink);border-radius:20px;max-width:620px;width:100%;max-height:80vh;overflow:auto;padding:38px;position:relative}
+.modal .box h3{font-size:22px;margin-bottom:16px}
+.modal .box p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.modal .x{position:absolute;top:18px;right:20px;background:none;border:0;font-size:24px;cursor:pointer;color:var(--muted)}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* back to top */
+.top-btn{position:fixed;bottom:26px;right:26px;width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff;border:0;font-size:19px;cursor:pointer;opacity:0;visibility:hidden;transition:.3s;z-index:90;box-shadow:0 10px 30px rgba(10,17,40,.3)}
+.top-btn.show{opacity:1;visibility:visible}
+/* responsive */
+@media(max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:48px}
+  .portrait-wrap{order:-1}
+  .chip.c1{left:-8px}.chip.c2{right:-8px}
+  .kpis{grid-template-columns:repeat(2,1fr);gap:22px}
+  .dept-grid,.cap-grid{grid-template-columns:repeat(2,1fr)}
+  .company .grid,.contact .grid{grid-template-columns:1fr;gap:44px}
+  .prog{grid-template-columns:1fr}
+  .prog:nth-child(even) .prog-media{order:0}
+  .nav-links{display:none}
+  .burger{display:block}
 }
-.nav-link::after {
-content: '';
-position: absolute;
-width: 0;
-height: 1px;
-bottom: -2px;
-left: 0;
-background-color: #333;
-transition: width 0.3s ease;
-}
-.nav-link:hover::after {
-width: 100%;
-}
-.cursor-dot {
-width: 8px;
-height: 8px;
-background-color: #333;
-border-radius: 50%;
-position: fixed;
-pointer-events: none;
-z-index: 9999;
-transform: translate(-50%, -50%);
-transition: transform 0.1s ease;
-}
-.cursor-outline {
-width: 40px;
-height: 40px;
-border: 1px solid rgba(51, 51, 51, 0.5);
-border-radius: 50%;
-position: fixed;
-pointer-events: none;
-z-index: 9998;
-transform: translate(-50%, -50%);
-transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
-}
-.interactive:hover ~ .cursor-outline {
-width: 60px;
-height: 60px;
-background-color: rgba(51, 51, 51, 0.05);
-}
-.portfolio-item {
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.portfolio-item:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-.portfolio-overlay {
-opacity: 0;
-transition: opacity 0.3s ease;
-}
-.portfolio-item:hover .portfolio-overlay {
-opacity: 1;
-}
-input, textarea {
-outline: none;
-transition: border-color 0.3s ease;
-}
-input:focus, textarea:focus {
-border-color: #333;
-}
-.social-icon {
-transition: transform 0.3s ease;
-}
-.social-icon:hover {
-transform: translateY(-3px);
-}
-.scroll-indicator {
-animation: bounce 2s infinite;
-}
-@keyframes bounce {
-0%, 20%, 50%, 80%, 100% {
-transform: translateY(0);
-}
-40% {
-transform: translateY(-10px);
-}
-60% {
-transform: translateY(-5px);
-}
-}
-.back-to-top {
-opacity: 0;
-visibility: hidden;
-transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.back-to-top.visible {
-opacity: 1;
-visibility: visible;
-}
-.switch {
-position: relative;
-display: inline-block;
-width: 50px;
-height: 24px;
-}
-.switch input {
-opacity: 0;
-width: 0;
-height: 0;
-}
-.slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
-transition: .4s;
-border-radius: 34px;
-}
-.slider:before {
-position: absolute;
-content: "";
-height: 18px;
-width: 18px;
-left: 3px;
-bottom: 3px;
-background-color: white;
-transition: .4s;
-border-radius: 50%;
-}
-input:checked + .slider {
-background-color: #333;
-}
-input:checked + .slider:before {
-transform: translateX(26px);
-}
-.brand-focus .portfolio-item[data-category="campaigns"],
-.brand-focus .portfolio-item[data-category="webinars"] {
-order: -1;
-}
-.brand-focus .portfolio-filter[data-filter="campaigns"],
-.brand-focus .portfolio-filter[data-filter="webinars"] {
-order: -1;
-}
-.brand-focus .portfolio-item {
-transition: transform 0.5s ease, opacity 0.3s ease;
-}
-.brand-focus .portfolio-item[data-category="in-person"] {
-opacity: 0.7;
-}
-.brand-focus .portfolio-item[data-category="in-person"]:hover {
-opacity: 1;
-}
-.nav-bg {
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-background-color: rgba(255, 255, 255, 0.8);
-transition: background-color 0.3s ease;
-}
-.fade-in {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in.visible {
-opacity: 1;
-transform: translateY(0);
-}
-.mobile-menu {
-transform: translateX(100%);
-transition: transform 0.3s ease;
-}
-.mobile-menu.open {
-transform: translateX(0);
-}
-.custom-checkbox {
-position: relative;
-padding-left: 30px;
-cursor: pointer;
-user-select: none;
-}
-.custom-checkbox input {
-position: absolute;
-opacity: 0;
-cursor: pointer;
-height: 0;
-width: 0;
-}
-.checkmark {
-position: absolute;
-top: 0;
-left: 0;
-height: 20px;
-width: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 4px;
-}
-.custom-checkbox:hover input ~ .checkmark {
-border-color: #ccc;
-}
-.custom-checkbox input:checked ~ .checkmark {
-background-color: #333;
-border-color: #333;
-}
-.checkmark:after {
-content: "";
-position: absolute;
-display: none;
-}
-.custom-checkbox input:checked ~ .checkmark:after {
-display: block;
-}
-.custom-checkbox .checkmark:after {
-left: 7px;
-top: 3px;
-width: 6px;
-height: 10px;
-border: solid white;
-border-width: 0 2px 2px 0;
-transform: rotate(45deg);
-}
-.dark-mode .checkmark {
-background-color: #1e1e1e;
-border-color: #333;
-}
-.dark-mode .custom-checkbox:hover input ~ .checkmark {
-border-color: #444;
-}
-.dark-mode .custom-checkbox input:checked ~ .checkmark {
-background-color: #f5f5f5;
-border-color: #f5f5f5;
-}
-.dark-mode .custom-checkbox .checkmark:after {
-border-color: #121212;
+@media(max-width:600px){
+  section{padding:70px 0}
+  .dept-grid,.cap-grid,.lang-band{grid-template-columns:1fr}
+  form .row{grid-template-columns:1fr}
+  .prog-body{padding:28px}
 }
 </style>
 </head>
-<body class="bg-white text-gray-900 min-h-screen">
-<div class="cursor-dot hidden md:block"></div>
-<div class="cursor-outline hidden md:block"></div>
-<!-- Header/Navigation -->
-<header class="fixed w-full top-0 z-50">
-<div class="nav-bg py-4 px-6 md:px-12 bg-white/80">
-<div class="max-w-7xl mx-auto flex justify-between items-center">
-<a href="#" class="text-xl font-['Pacifico'] text-primary interactive">Lutho</a>
-<nav class="hidden md:flex items-center space-x-8">
-<a href="#about" class="nav-link text-sm font-medium interactive" data-i18n="about">About</a>
-<a href="#work" class="nav-link text-sm font-medium interactive" data-i18n="work">Work</a>
-<a href="#contact" class="nav-link text-sm font-medium interactive" data-i18n="contact">Contact</a>
-<div class="flex items-center ml-4">
-<span class="mr-2 text-xs">Community</span>
-<label class="switch">
-<input type="checkbox" id="focus-toggle">
-<span class="slider"></span>
-</label>
-<span class="ml-2 text-xs">Brand</span>
-</div>
-<!-- Language Toggle -->
-<div class="ml-6">
-<button id="lang-toggle" class="px-3 py-1 bg-gray-200 rounded-full text-xs font-medium interactive">DE</button>
-</div>
-</nav>
-<button class="md:hidden interactive w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
-<i class="ri-menu-line ri-lg"></i>
-</button>
-</div>
-</div>
-<!-- Mobile Menu -->
-<div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden dark:bg-gray-900">
-<div class="p-6">
-<div class="flex justify-end mb-8">
-<button class="interactive w-10 h-10 flex items-center justify-center" id="close-menu-button">
-<i class="ri-close-line ri-lg"></i>
-</button>
-</div>
-<nav class="flex flex-col space-y-6">
-<a href="#about" class="text-lg font-medium interactive mobile-link">About</a>
-<a href="#work" class="text-lg font-medium interactive mobile-link">Work</a>
-<a href="#contact" class="text-lg font-medium interactive mobile-link">Contact</a>
-<div class="flex items-center mt-4">
-<span class="mr-2 text-xs">Community</span>
-<label class="switch">
-<input type="checkbox" id="mobile-focus-toggle">
-<span class="slider"></span>
-</label>
-<span class="ml-2 text-xs">Brand</span>
-</div>
-</nav>
-</div>
-</div>
+<body>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#" class="logo"><span class="mark">L<span>K</span></span>Lutho Kote</a>
+    <nav class="nav-links">
+      <a href="#company" data-i18n="nav_company">The Company</a>
+      <a href="#org" data-i18n="nav_org">Departments</a>
+      <a href="#programs" data-i18n="nav_programs">Programs</a>
+      <a href="#partnerships" data-i18n="nav_partner">Partnerships</a>
+      <a href="#caps" data-i18n="nav_caps">Capabilities</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button id="lang-en" class="active">EN</button>
+        <button id="lang-de">DE</button>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav_cta">Work with me</a>
+    </nav>
+    <button class="burger" id="burger">☰</button>
+  </div>
 </header>
-<!-- Hero Section -->
-<section class="min-h-screen flex items-center justify-center pt-20 pb-10 relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white -z-10"></div>
-<div class="max-w-7xl mx-auto px-6 md:px-12">
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div class="text-left fade-in order-2 md:order-1">
-<div class="mb-8">
-<span class="inline-block px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium mb-6">Senior Community Manager</span>
-<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight interactive leading-tight">
-Building <span class="text-primary">Thriving Communities</span> That Drive Business Growth
-</h1>
-<p class="text-lg text-gray-600 mb-8 leading-relaxed">
-Strategic community professional with 8+ years of experience building engaged communities, driving user growth, and fostering meaningful connections that deliver measurable business impact for global brands.
-</p>
-</div>
-<div class="flex flex-col sm:flex-row gap-4 mb-8">
-<a href="#contact" class="px-8 py-4 bg-primary text-white font-medium rounded-button transition-all hover:bg-opacity-90 interactive whitespace-nowrap text-center">View Resume</a>
-<a href="#work" class="px-8 py-4 border-2 border-gray-200 text-gray-700 font-medium rounded-button transition-all hover:border-primary hover:text-primary interactive whitespace-nowrap text-center">See My Impact</a>
-</div>
-<div class="flex items-center gap-8">
-<div class="flex -space-x-4">
-<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20young%20diverse%20business%20person%20smiling%20confidently%20at%20camera%2C%20clean%20business%20attire%2C%20neutral%20background&width=100&height=100&seq=21&orientation=squarish" class="w-12 h-12 rounded-full border-2 border-white" alt="Client">
-<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20middle%20aged%20business%20woman%20smiling%20warmly%20at%20camera%2C%20clean%20business%20attire%2C%20neutral%20background&width=100&height=100&seq=22&orientation=squarish" class="w-12 h-12 rounded-full border-2 border-white" alt="Client">
-<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20mature%20business%20man%20smiling%20confidently%20at%20camera%2C%20clean%20business%20attire%2C%20neutral%20background&width=100&height=100&seq=23&orientation=squarish" class="w-12 h-12 rounded-full border-2 border-white" alt="Client">
-</div>
-<div>
-<div class="flex items-center gap-1 text-primary font-semibold">
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-</div>
-<p class="text-sm text-gray-600">Trusted by 50+ brands worldwide</p>
-</div>
-</div>
-</div>
-<div class="order-1 md:order-2 fade-in">
-  <div class="relative flex justify-center">
-    <img src="portrait-lutho-kote.png" alt="Lutho Kote" class="rounded-full border-4 border-primary shadow-2xl w-64 h-64 object-cover mx-auto">
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" id="closeMenu">✕</button>
+  <a href="#company" data-i18n="nav_company">The Company</a>
+  <a href="#org" data-i18n="nav_org">Departments</a>
+  <a href="#programs" data-i18n="nav_programs">Programs</a>
+  <a href="#partnerships" data-i18n="nav_partner">Partnerships</a>
+  <a href="#caps" data-i18n="nav_caps">Capabilities</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+  <div class="lang-switch">
+    <button id="m-lang-en" class="active">EN</button>
+    <button id="m-lang-de">DE</button>
   </div>
 </div>
-</div>
-</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="badge"><span class="dot"></span><span data-i18n="hero_badge">Community & Brand Manager · Frankfurt / Remote</span></div>
+      <h1 data-i18n-html="hero_h1">One person.<br>Run like a <em>company</em>.</h1>
+      <p class="sub" data-i18n="hero_sub">I'm Lutho Kote — Community & Brand Manager with 5 years of experience turning audiences into communities, and communities into measurable growth. Currently leading webinars, the customer referral program and the ambassador program at Fintiba.</p>
+      <div class="hero-ctas">
+        <a href="#org" class="btn btn-primary" data-i18n="hero_cta1">Explore the company</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta2">Start a conversation</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><b data-count="5">0</b><span data-i18n="kpi1">years in marketing, brand & community</span></div>
+        <div class="kpi"><b data-count="3">0</b><span data-i18n="kpi2">growth programs led at Fintiba</span></div>
+        <div class="kpi"><b>EN·DE</b><span data-i18n="kpi3">fluent English & German (C1)</span></div>
+        <div class="kpi"><b data-count="6">0</b><span data-i18n="kpi4">departments in one professional</span></div>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="frame"><img src="portrait-lutho-kote.png" alt="Lutho Kote — Community & Brand Manager"></div>
+      <div class="chip c1"><div class="ico">🎙</div><div data-i18n-html="chip1">Webinar Lead<small>Fintiba</small></div></div>
+      <div class="chip c2"><div class="ico">🤝</div><div data-i18n-html="chip2">Referral & Ambassador<small>Program Manager</small></div></div>
+      <div class="chip c3"><div class="ico">🌍</div><div data-i18n-html="chip3">EN / DE<small>bilingual delivery</small></div></div>
+    </div>
+  </div>
 </section>
-<!-- About Section -->
-<section id="about" class="py-20 bg-gray-50">
-<div class="max-w-7xl mx-auto px-6 md:px-12">
-<div class="md:flex md:items-center md:space-x-12 lg:space-x-20">
-<div class="md:w-5/12 mb-10 md:mb-0 fade-in">
-<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20male%20community%20manager%20in%20his%2030s%20with%20confident%20expression%2C%20business%20casual%20attire%2C%20looking%20directly%20at%20camera%2C%20soft%20natural%20lighting%2C%20clean%20background%2C%20high%20quality%20professional%20headshot&width=600&height=800&seq=1&orientation=portrait" alt="Lutho Kote" class="rounded-lg shadow-lg w-full h-auto object-cover">
-</div>
-<div class="md:w-7/12 fade-in">
-<h2 class="text-3xl font-bold mb-6 interactive">About Me</h2>
-<p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-I'm a results-driven Senior Community Manager with over 8 years of experience in building and scaling online communities for global brands. Currently serving as Community Manager at Fintiba, I specialize in developing engagement strategies, fostering user growth, and creating impactful community programs that align with business objectives.
-</p>
-<p class="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-My approach combines data-driven decision making with deep empathy for user needs. I excel in cross-functional collaboration, working seamlessly with product, marketing, and support teams to create cohesive community experiences that drive measurable results and brand loyalty.
-</p>
-<div class="mb-8">
-<h3 class="text-lg font-semibold mb-4 interactive">Core Competencies</h3>
-<div class="grid grid-cols-2 gap-3">
-<div class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
-<i class="ri-check-line text-primary"></i>
-</div>
-<span class="text-gray-700 dark:text-gray-300">Community Strategy</span>
-</div>
-<div class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
-<i class="ri-check-line text-primary"></i>
-</div>
-<span class="text-gray-700 dark:text-gray-300">Brand Community Building</span>
-</div>
-<div class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
-<i class="ri-check-line text-primary"></i>
-</div>
-<span class="text-gray-700 dark:text-gray-300">Program Management</span>
-</div>
-<div class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
-<i class="ri-check-line text-primary"></i>
-</div>
-<span class="text-gray-700 dark:text-gray-300">Content Strategy</span>
-</div>
-<div class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
-<i class="ri-check-line text-primary"></i>
-</div>
-<span class="text-gray-700 dark:text-gray-300">Analytics & Reporting</span>
-</div>
-<div class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
-<i class="ri-check-line text-primary"></i>
-</div>
-<span class="text-gray-700 dark:text-gray-300">Cross-team Collaboration</span>
-</div>
-</div>
-</div>
-<a href="#work" class="inline-block px-6 py-3 bg-primary text-white font-medium rounded-button transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View My Work</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Work/Portfolio Section -->
-<section id="work" class="py-20">
-<div class="max-w-7xl mx-auto px-6 md:px-12">
-<div class="text-center mb-16 fade-in">
-<h2 class="text-3xl font-bold mb-4 interactive">Featured Community Initiatives</h2>
-<p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-Showcasing impactful community events, webinars, and marketing initiatives that bring people together and create meaningful connections for brand growth.
-</p>
-</div>
-<div class="mb-10 fade-in">
-<div class="flex flex-wrap justify-center gap-3 mb-12">
-<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter active whitespace-nowrap" data-filter="all">All Initiatives</button>
-<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter whitespace-nowrap" data-filter="in-person">In-Person Events</button>
-<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter whitespace-nowrap" data-filter="webinars">Webinars</button>
-<button class="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-all interactive portfolio-filter whitespace-nowrap" data-filter="campaigns">Community Campaigns</button>
-</div>
-</div>
-<div class="max-w-4xl mx-auto mb-16 fade-in">
-<div class="relative rounded-lg overflow-hidden shadow-lg">
-<img src="https://readdy.ai/api/search-image?query=professional%20tech%20conference%20or%20community%20event%20with%20engaged%20audience%2C%20modern%20venue%20setup%2C%20speaker%20on%20stage%2C%20high-quality%20event%20photography%2C%20warm%20lighting%2C%20professional%20atmosphere&width=1280&height=720&seq=8&orientation=landscape" alt="Featured Community Event" class="w-full h-auto">
-<div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-<button class="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center text-primary hover:bg-opacity-100 transition-all interactive">
-<i class="ri-play-fill ri-2x"></i>
-</button>
-</div>
-</div>
-<div class="text-center mt-6">
-<h3 class="text-lg font-semibold mb-2">Fintiba Community Summit 2024</h3>
-<p class="text-gray-600 dark:text-gray-300">Annual flagship event bringing together international students and industry leaders</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-<!-- Portfolio Item 1 -->
-<div class="portfolio-item rounded-lg overflow-hidden bg-gray-800/30 shadow-md fade-in" data-category="in-person">
-<div class="relative">
-<img src="https://readdy.ai/api/search-image?query=tech%20meetup%20or%20workshop%20with%20diverse%20group%20of%20people%20collaborating%2C%20modern%20office%20or%20event%20space%2C%20interactive%20session%2C%20professional%20event%20photography%2C%20natural%20lighting&width=600&height=450&seq=9&orientation=landscape" alt="Student Success Workshop Series" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-<div class="text-center">
-<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">In-Person Events</span>
-<h3 class="text-white text-lg font-semibold mb-2">Student Success Workshop Series</h3>
-<p class="text-gray-200 text-sm mb-4">Monthly career development workshops</p>
-<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Event</a>
-</div>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold mb-2">Student Success Workshop Series</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm">Monthly career development workshops</p>
-</div>
-</div>
-<!-- Portfolio Item 2 -->
-<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="webinars">
-  <div class="relative">
-    <div class="swiper webinars-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="webinar1.png" alt="Webinar 1" class="w-full h-64 object-cover object-top">
-        </div>
-        <div class="swiper-slide">
-          <img src="webinar2.png" alt="Webinar 2" class="w-full h-64 object-cover object-top">
+
+<div class="marquee"><div class="track" id="marqueeTrack"></div></div>
+
+<!-- COMPANY -->
+<section class="company" id="company">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="kicker" data-i18n="co_kicker">The Company</span>
+        <h2 class="h2" data-i18n="co_h2">My brand operates like a business — because it is one.</h2>
+        <p class="lead" data-i18n="co_lead">Five years across marketing, brand and community taught me that a personal brand is not a CV. It is an operating company: strategy, programs, partnerships, content, budgets and results. This site is its annual report.</p>
+        <div class="mission-card reveal">
+          <h3 data-i18n="co_mission_t">Mission</h3>
+          <p data-i18n="co_mission_p">Build communities people genuinely want to belong to — and turn that belonging into brand trust, advocacy and growth that a CFO can see on a dashboard.</p>
         </div>
       </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Add Navigation -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-    <div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-      <div class="text-center">
-        <span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Webinars</span>
-        <h3 class="text-white text-lg font-semibold mb-2">Webinar Highlights</h3>
-        <p class="text-gray-200 text-sm mb-4">Impressionen aus vergangenen Webinaren / Highlights from past webinars</p>
-      </div>
-    </div>
-  </div>
-  <div class="p-6">
-    <h3 class="text-lg font-semibold mb-2">Webinar Highlights</h3>
-    <p class="text-gray-600 dark:text-gray-300 text-sm">Impressionen aus vergangenen Webinaren / Highlights from past webinars</p>
-  </div>
-</div>
-<!-- Portfolio Item 3 -->
-<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="campaigns">
-<div class="relative">
-<img src="https://readdy.ai/api/search-image?query=social%20media%20community%20campaign%20collage%2C%20user%20generated%20content%2C%20community%20engagement%20posts%2C%20hashtag%20campaign%20visuals%2C%20professional%20social%20media%20marketing%20presentation&width=600&height=450&seq=11&orientation=landscape" alt="Community Growth Campaign" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-<div class="text-center">
-<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Community Campaigns</span>
-<h3 class="text-white text-lg font-semibold mb-2">#StudyAbroadSuccess Campaign</h3>
-<p class="text-gray-200 text-sm mb-4">User-generated content initiative</p>
-<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Campaign</a>
-</div>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold mb-2">#StudyAbroadSuccess Campaign</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm">User-generated content initiative</p>
-</div>
-</div>
-<!-- Portfolio Item 4 -->
-<div class="portfolio-item rounded-lg overflow-hidden bg-gray-800/30 shadow-md fade-in" data-category="in-person">
-<div class="relative">
-<img src="https://readdy.ai/api/search-image?query=tech%20networking%20event%20or%20mixer%20with%20professionals%20networking%2C%20casual%20business%20atmosphere%2C%20modern%20venue%2C%20evening%20event%20lighting%2C%20professional%20event%20photography&width=600&height=450&seq=12&orientation=landscape" alt="Alumni Networking Events" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-<div class="text-center">
-<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">In-Person Events</span>
-<h3 class="text-white text-lg font-semibold mb-2">Alumni Networking Events</h3>
-<p class="text-gray-200 text-sm mb-4">Quarterly networking meetups</p>
-<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Event</a>
-</div>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold mb-2">Alumni Networking Events</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm">Quarterly networking meetups</p>
-</div>
-</div>
-<!-- Portfolio Item 5 -->
-<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="webinars">
-<div class="relative">
-<img src="https://readdy.ai/api/search-image?query=online%20workshop%20or%20masterclass%20with%20interactive%20elements%2C%20virtual%20whiteboard%2C%20participant%20engagement%2C%20professional%20online%20teaching%20setup%2C%20clean%20educational%20presentation&width=600&height=450&seq=13&orientation=landscape" alt="Community Leadership Workshop" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-<div class="text-center">
-<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Webinars</span>
-<h3 class="text-white text-lg font-semibold mb-2">Community Leadership Workshop</h3>
-<p class="text-gray-200 text-sm mb-4">Virtual training series</p>
-<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">Watch Recording</a>
-</div>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold mb-2">Community Leadership Workshop</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm">Virtual training series</p>
-</div>
-</div>
-<!-- Portfolio Item 6 -->
-<div class="portfolio-item rounded-lg overflow-hidden bg-white dark:bg-gray-900 shadow-md fade-in" data-category="campaigns">
-<div class="relative">
-<img src="https://readdy.ai/api/search-image?query=community%20mentorship%20program%20showcase%2C%20diverse%20group%20mentoring%20session%2C%20professional%20development%20workshop%2C%20collaborative%20learning%20environment%2C%20modern%20office%20setting&width=600&height=450&seq=14&orientation=landscape" alt="Mentorship Program" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-<div class="text-center">
-<span class="inline-block px-3 py-1 bg-white text-primary text-xs font-medium rounded-full mb-3 whitespace-nowrap">Community Campaigns</span>
-<h3 class="text-white text-lg font-semibold mb-2">Student Mentorship Program</h3>
-<p class="text-gray-200 text-sm mb-4">6-month community mentorship initiative</p>
-<a href="#" class="inline-block px-4 py-2 bg-white text-primary font-medium rounded-button text-sm transition-all hover:bg-opacity-90 interactive whitespace-nowrap">View Program</a>
-</div>
-</div>
-</div>
-<div class="p-6">
-<h3 class="text-lg font-semibold mb-2">Student Mentorship Program</h3>
-<p class="text-gray-600 dark:text-gray-300 text-sm">6-month community mentorship initiative</p>
-</div>
-</div>
-</div>
-<div class="text-center mt-12 fade-in">
-<a href="#" class="inline-block px-6 py-3 border border-gray-300 dark:border-gray-600 text-primary font-medium rounded-button transition-all hover:bg-gray-50 dark:hover:bg-gray-800 interactive whitespace-nowrap">View All Projects</a>
-</div>
-</div>
-</section>
-<!-- Videos Section -->
-<section id="videos" class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-6 md:px-12">
-    <div class="text-center mb-12 fade-in">
-      <h2 class="text-3xl font-bold mb-4 interactive" data-i18n="videos">Videos</h2>
-      <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto" data-i18n="videos_desc">
-        Sehen Sie sich meine neuesten Community- und Webinar-Videos an. / Watch my latest community and webinar videos.
-      </p>
-    </div>
-    <div class="flex justify-center fade-in">
-      <div class="w-full max-w-2xl aspect-w-16 aspect-h-9">
-        <iframe class="w-full h-72 md:h-96 rounded-xl shadow-lg" src="https://www.youtube.com/embed/jbTn5hWfDD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="pillars reveal">
+        <div class="pillar"><span class="n">01</span><div><b data-i18n="p1_t">Strategy before tactics</b><span data-i18n="p1_p">Responsibility for developing and implementing brand strategy in peer-to-peer channels — from concept and planning to key initiatives, symposia and speaker training.</span></div></div>
+        <div class="pillar"><span class="n">02</span><div><b data-i18n="p2_t">Leadership without authority</b><span data-i18n="p2_p">Cross-functional project leadership across marketing, sales and expert teams — without direct management responsibility, and with full accountability for results.</span></div></div>
+        <div class="pillar"><span class="n">03</span><div><b data-i18n="p3_t">Evidence, not opinion</b><span data-i18n="p3_p">Budget responsibility and forecasting, consistent use of measurement instruments, and a results orientation that treats every program as a P&L line.</span></div></div>
+        <div class="pillar"><span class="n">04</span><div><b data-i18n="p4_t">Complexity, translated</b><span data-i18n="p4_p">The ability to present scientific and complex content in a way that is right for each audience — in fluent English and German.</span></div></div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Videos Section -->
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-gray-50">
-<div class="max-w-3xl mx-auto px-6 md:px-12">
-<div class="text-center mb-12 fade-in">
-<h2 class="text-3xl font-bold mb-4 interactive">Let's Connect</h2>
-<p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-Looking for a senior community manager who can drive engagement and growth for your brand? I'm excited to discuss how my experience can benefit your team and community.
-</p>
-</div>
-<form class="fade-in">
-<div class="mb-6">
-<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-<input type="text" id="name" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all" placeholder="Your name">
-</div>
-<div class="mb-6">
-<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-<input type="email" id="email" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all" placeholder="Your email address">
-</div>
-<div class="mb-6">
-<label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
-<input type="text" id="subject" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all" placeholder="What is this regarding?">
-</div>
-<div class="mb-6">
-<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-<textarea id="message" rows="5" class="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded focus:ring-2 focus:ring-primary focus:ring-opacity-50 outline-none transition-all resize-none" placeholder="Tell me about your project..."></textarea>
-</div>
-<div class="mb-8">
-<label class="custom-checkbox interactive">
-<input type="checkbox">
-<span class="checkmark"></span>
-<span class="text-sm text-gray-600 dark:text-gray-300">I agree to receive occasional updates about new projects and availability.</span>
-</label>
-</div>
-<div class="text-center">
-<button type="submit" class="px-8 py-3 bg-primary text-white font-medium rounded-button transition-all hover:bg-opacity-90 interactive whitespace-nowrap">Send Message</button>
-</div>
-</form>
-<div class="mt-16 text-center fade-in">
-<p class="text-gray-600 dark:text-gray-300 mb-6">Or reach out directly at:</p>
-<a href="mailto:lutho.kote@relicom.de" class="text-primary font-medium hover:underline interactive">lutho.kote@relicom.de</a>
-<div class="flex justify-center mt-8 space-x-6">
-<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
-<i class="ri-instagram-line ri-lg"></i>
-</a>
-<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
-<i class="ri-twitter-line ri-lg"></i>
-</a>
-<a href="https://www.linkedin.com/in/lutho-kote-%F0%9F%9A%80-3617a61a0/" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
-<i class="ri-linkedin-line ri-lg"></i>
-</a>
-<a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive">
-<i class="ri-global-line ri-lg"></i>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Partners Section -->
-<section id="partners" class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-6 md:px-12">
-    <div class="text-center mb-10 fade-in">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4 interactive" data-i18n="partners">Partner</h2>
-      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-i18n="partners_desc">
-        Ich habe mit führenden Organisationen zusammengearbeitet / I have worked with leading organizations:
-      </p>
+
+<!-- ORG CHART -->
+<section class="org" id="org">
+  <div class="wrap">
+    <div style="text-align:center;max-width:680px;margin:0 auto" class="reveal">
+      <span class="kicker" data-i18n="org_kicker">The Org Chart</span>
+      <h2 class="h2" data-i18n="org_h2">Six departments. One head-count.</h2>
+      <p class="lead" style="margin:0 auto" data-i18n="org_lead">Every function a brand team needs, held by one person. Click a department to open its charter.</p>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center justify-center">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Goethe-Institut_Logo_2011.svg" alt="Goethe Institut Logo" class="h-12 mx-auto">
-      <img src="https://www.mawista.com/wp-content/uploads/2021/09/mawista-logo.svg" alt="Mawista Logo" class="h-12 mx-auto">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Coat_of_arms_of_South_Africa_%28heraldic%29.svg" alt="South African Embassy Logo" class="h-12 mx-auto">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Barmer_Logo_2017.svg" alt="BARMER Logo" class="h-12 mx-auto">
-      <img src="https://www.chancenkarte.de/wp-content/uploads/2023/06/chancenkarte-logo.svg" alt="Chancenkarte Logo" class="h-12 mx-auto">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/HousingAnywhere_logo.svg" alt="HousingAnywhere Logo" class="h-12 mx-auto">
-      <img src="https://www.spacest.com/wp-content/uploads/2022/09/spacest-logo.svg" alt="Spacest Logo" class="h-12 mx-auto">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/NIO_Logo.svg" alt="NIO Logo" class="h-12 mx-auto">
+    <div class="org-chart">
+      <div class="ceo-card reveal">
+        <img src="portrait-lutho-kote.png" alt="Lutho Kote">
+        <b>Lutho Kote</b>
+        <span data-i18n="org_ceo">Founder & CEO — Brand of Lutho Kote</span>
+      </div>
+      <div class="org-stem"></div>
+      <div class="org-rail"></div>
+      <div class="dept-grid">
+        <div class="dept reveal" data-dept>
+          <div class="ico">💬</div>
+          <span class="role" data-i18n="d1_r">Head of Community</span>
+          <h3 data-i18n="d1_t">Community</h3>
+          <p data-i18n="d1_p">Building and scaling engaged communities that feel like belonging, not broadcasting.</p>
+          <ul>
+            <li data-i18n="d1_l1">Community strategy, engagement programs and moderation at Fintiba</li>
+            <li data-i18n="d1_l2">Maximizing customer engagement through innovative peer-to-peer programs</li>
+            <li data-i18n="d1_l3">Turning satisfied customers into active advocates and ambassadors</li>
+          </ul>
+          <span class="more" data-i18n="d_more">Open charter ↓</span>
+        </div>
+        <div class="dept reveal" data-dept>
+          <div class="ico">🎙</div>
+          <span class="role" data-i18n="d2_r">Head of Webinars & Events — Lead</span>
+          <h3 data-i18n="d2_t">Webinars & Events</h3>
+          <p data-i18n="d2_p">End-to-end ownership of Fintiba's webinar program: concept, storyline, speakers, execution, follow-up.</p>
+          <ul>
+            <li data-i18n="d2_l1">Design of high-quality speaker programs — virtual, face-to-face and on-demand — built for reuse and scale</li>
+            <li data-i18n="d2_l2">Close coordination with execution and event teams for smooth (e)P2P delivery</li>
+            <li data-i18n="d2_l3">Maximizing every event through optimal preparation and follow-up with omni-channel engagement</li>
+            <li data-i18n="d2_l4">Conception and management of advisory boards and speaker training</li>
+          </ul>
+          <span class="more" data-i18n="d_more">Open charter ↓</span>
+        </div>
+        <div class="dept reveal" data-dept>
+          <div class="ico">🚀</div>
+          <span class="role" data-i18n="d3_r">Head of Growth Programs</span>
+          <h3 data-i18n="d3_t">Growth Programs</h3>
+          <p data-i18n="d3_p">Managing Fintiba's customer referral program and ambassador referral program as growth engines.</p>
+          <ul>
+            <li data-i18n="d3_l1">Program design: incentives, journeys and mechanics that make advocacy effortless</li>
+            <li data-i18n="d3_l2">Recruiting, enabling and retaining brand ambassadors</li>
+            <li data-i18n="d3_l3">Consistent measurement — understanding checks, KPIs and program forecasting</li>
+          </ul>
+          <span class="more" data-i18n="d_more">Open charter ↓</span>
+        </div>
+        <div class="dept reveal" data-dept>
+          <div class="ico">🤝</div>
+          <span class="role" data-i18n="d4_r">Head of Partnerships & KOL</span>
+          <h3 data-i18n="d4_t">Partnerships & KOL</h3>
+          <p data-i18n="d4_p">KOL management and building durable networks with opinion leaders and thought leaders.</p>
+          <ul>
+            <li data-i18n="d4_l1">Identifying, engaging and supporting key opinion leaders through innovative (e)P2P programs</li>
+            <li data-i18n="d4_l2">Integrating external experts into concept development on an equal footing</li>
+            <li data-i18n="d4_l3">Advisory boards and scientific events as long-term relationship platforms</li>
+          </ul>
+          <span class="more" data-i18n="d_more">Open charter ↓</span>
+        </div>
+        <div class="dept reveal" data-dept>
+          <div class="ico">✍️</div>
+          <span class="role" data-i18n="d5_r">Head of Content & Communication</span>
+          <h3 data-i18n="d5_t">Content & Communication</h3>
+          <p data-i18n="d5_p">Developing event content, storylines and key messages — and making complex content land with any audience.</p>
+          <ul>
+            <li data-i18n="d5_l1">Presenting scientific content appropriately for each target audience</li>
+            <li data-i18n="d5_l2">Storylines and key messages for events, campaigns and programs</li>
+            <li data-i18n="d5_l3">Bilingual creation and delivery in English and German (C1)</li>
+          </ul>
+          <span class="more" data-i18n="d_more">Open charter ↓</span>
+        </div>
+        <div class="dept reveal" data-dept>
+          <div class="ico">📊</div>
+          <span class="role" data-i18n="d6_r">Head of Strategy & Operations</span>
+          <h3 data-i18n="d6_t">Strategy & Operations</h3>
+          <p data-i18n="d6_p">Strategic planning, budget responsibility and the operational discipline that gets programs shipped on time.</p>
+          <ul>
+            <li data-i18n="d6_l1">Brand strategy development and implementation in the P2P channel</li>
+            <li data-i18n="d6_l2">Budget responsibility and forecasting across programs</li>
+            <li data-i18n="d6_l3">Timely, targeted implementation with consistent success measurement</li>
+            <li data-i18n="d6_l4">Cross-functional coordination with marketing, sales and medical/expert teams</li>
+          </ul>
+          <span class="more" data-i18n="d_more">Open charter ↓</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End Partners Section -->
-<!-- Footer -->
-<footer class="py-12 bg-gray-100">
-<div class="max-w-7xl mx-auto px-6 md:px-12">
-<div class="text-center fade-in">
-<a href="#" class="text-xl font-['Pacifico'] text-primary mb-6 inline-block interactive">Lutho</a>
-<div class="flex justify-center space-x-8 mb-8">
-<a href="#about" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">About</a>
-<a href="#work" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Work</a>
-<a href="#contact" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Contact</a>
-<a href="#" id="privacy-link" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Privacy Policy</a>
-<a href="#" id="terms-link" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary transition-all interactive">Terms & Conditions</a>
-</div>
-<div class="flex justify-center mt-4 mb-8">
-<a href="https://www.linkedin.com/in/lutho-kote-%F0%9F%9A%80-3617a61a0/" class="social-icon w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full shadow-sm hover:text-primary transition-all interactive" target="_blank" rel="noopener" aria-label="LinkedIn">
-<i class="ri-linkedin-line ri-lg"></i>
-</a>
-</div>
-<p class="text-sm text-gray-500 dark:text-gray-400">
-&copy; 2025 Lutho Kote. All rights reserved.
-</p>
-</div>
-</div>
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker" data-i18n="pr_kicker">Flagship Programs</span>
+      <h2 class="h2" data-i18n="pr_h2">What I'm running right now at Fintiba</h2>
+      <p class="lead" data-i18n="pr_lead">Three live programs, one owner. Real responsibilities — not portfolio filler.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog reveal">
+        <div class="prog-media">
+          <div class="slider" id="webinarSlider">
+            <img src="webinar1.png" alt="Fintiba webinar" class="on">
+            <img src="webinar2.png" alt="Fintiba webinar highlights">
+            <div class="dots"><i class="on"></i><i></i></div>
+          </div>
+          <span class="tag lead-tag" data-i18n="pr1_tag">LEAD</span>
+        </div>
+        <div class="prog-body">
+          <h3 data-i18n="pr1_t">Webinar Program</h3>
+          <p data-i18n="pr1_p">Leading Fintiba's webinar program end-to-end: concept and storyline, speaker preparation and training, live execution with the event team, and structured follow-up that converts attention into engagement. Designed for reuse — every format scales from local to regional.</p>
+          <div class="facts">
+            <span class="fact" data-i18n="pr1_f1">Program lead</span>
+            <span class="fact" data-i18n="pr1_f2">Virtual · hybrid · on-demand</span>
+            <span class="fact" data-i18n="pr1_f3">Speaker training</span>
+            <span class="fact" data-i18n="pr1_f4">EN / DE delivery</span>
+          </div>
+        </div>
+      </div>
+      <div class="prog reveal">
+        <div class="prog-media">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="Referral program — partnership handshake">
+          <span class="tag" data-i18n="pr2_tag">GROWTH</span>
+        </div>
+        <div class="prog-body">
+          <h3 data-i18n="pr2_t">Customer Referral Program</h3>
+          <p data-i18n="pr2_p">Managing the program that turns satisfied Fintiba customers into a measurable acquisition channel — owning the journey, the incentives, the communication and the numbers behind it.</p>
+          <div class="facts">
+            <span class="fact" data-i18n="pr2_f1">Program management</span>
+            <span class="fact" data-i18n="pr2_f2">Incentive & journey design</span>
+            <span class="fact" data-i18n="pr2_f3">KPI ownership</span>
+          </div>
+        </div>
+      </div>
+      <div class="prog reveal">
+        <div class="prog-media">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" alt="Ambassador program — international students community">
+          <span class="tag" data-i18n="pr3_tag">COMMUNITY</span>
+        </div>
+        <div class="prog-body">
+          <h3 data-i18n="pr3_t">Ambassador Referral Program</h3>
+          <p data-i18n="pr3_p">Building and managing Fintiba's ambassador network: recruiting authentic voices from the community, enabling them with content and training, and turning peer trust into sustainable brand reach.</p>
+          <div class="facts">
+            <span class="fact" data-i18n="pr3_f1">Ambassador recruitment</span>
+            <span class="fact" data-i18n="pr3_f2">Enablement & training</span>
+            <span class="fact" data-i18n="pr3_f3">Peer-to-peer advocacy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIPS -->
+<section class="partnerships" id="partnerships" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal" style="max-width:720px">
+      <span class="kicker" data-i18n="bp_kicker">Brand Partnerships</span>
+      <h2 class="h2" data-i18n="bp_h2">One face. Many stages. Your brand's story, told by someone who lived it.</h2>
+      <p class="lead" data-i18n="bp_lead">Great athletes don't just play — they become the trusted face of the brands they believe in. I apply that playbook to international education: fintech, edtech, insurance, housing and language brands serving international students and skilled talent get a bilingual voice their audience already trusts, backed by real program-management muscle.</p>
+    </div>
+    <div class="cap-grid" style="margin-top:48px">
+      <div class="cap reveal" style="background:var(--paper);border:1px solid var(--line)"><b style="color:var(--accent)" data-i18n="bp1_t">Webinar host & moderator</b><p style="color:var(--muted)" data-i18n="bp1_p">Your expert content, presented by an experienced webinar lead — concept, storyline, live delivery and follow-up, in English and German.</p></div>
+      <div class="cap reveal" style="background:var(--paper);border:1px solid var(--line)"><b style="color:var(--accent)" data-i18n="bp2_t">Ambassador & referral programs</b><p style="color:var(--muted)" data-i18n="bp2_p">I design, launch and run the advocacy engine behind your brand — the same playbook I run at Fintiba, adapted to your audience.</p></div>
+      <div class="cap reveal" style="background:var(--paper);border:1px solid var(--line)"><b style="color:var(--accent)" data-i18n="bp3_t">Campaign face & storyteller</b><p style="color:var(--muted)" data-i18n="bp3_p">An authentic international journey your audience recognizes as their own — on camera, on stage and in content that converts trust into action.</p></div>
+      <div class="cap reveal" style="background:var(--paper);border:1px solid var(--line)"><b style="color:var(--accent)" data-i18n="bp4_t">KOL & event partnerships</b><p style="color:var(--muted)" data-i18n="bp4_p">Panels, advisory boards, speaker training and opinion-leader networks that position your brand where decisions are made.</p></div>
+    </div>
+    <div class="reveal" style="margin-top:44px;background:var(--ink);color:#fff;border-radius:var(--radius);padding:34px 38px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+      <div style="max-width:640px">
+        <b style="font-family:'Space Grotesk';font-size:19px;display:block;margin-bottom:6px" data-i18n="bp_cta_t">Building in international education?</b>
+        <span style="font-size:14.5px;color:rgba(255,255,255,.7)" data-i18n="bp_cta_p">From single-brand players to portfolio holdings consolidating the space — if your growth depends on the trust of international students and skilled talent, let's talk.</span>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-i18n="bp_cta_b">Discuss a partnership</a>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="caps" id="caps">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker" data-i18n="cap_kicker">Capabilities</span>
+      <h2 class="h2" data-i18n="cap_h2">The full stack of a modern brand team</h2>
+      <p class="lead" data-i18n="cap_lead">Skills proven in the field — in peer-to-peer programs, events and cross-functional projects.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap reveal"><b data-i18n="c1_t">Scientific storytelling</b><p data-i18n="c1_p">Presenting scientific and complex content in a way that is appropriate — and compelling — for each target audience.</p></div>
+      <div class="cap reveal"><b data-i18n="c2_t">KOL management</b><p data-i18n="c2_p">Building networks with opinion leaders and promoting thought-leader support through innovative (e)P2P programs.</p></div>
+      <div class="cap reveal"><b data-i18n="c3_t">Cross-functional leadership</b><p data-i18n="c3_p">Leading projects across marketing, sales and expert teams — without direct management responsibility.</p></div>
+      <div class="cap reveal"><b data-i18n="c4_t">Program design</b><p data-i18n="c4_p">High-quality speaker programs — virtual, face-to-face and on-demand — designed for reuse and scalability.</p></div>
+      <div class="cap reveal"><b data-i18n="c5_t">Advisory boards & training</b><p data-i18n="c5_p">Conception and management of advisory boards and speaker training for continuous program development.</p></div>
+      <div class="cap reveal"><b data-i18n="c6_t">Budget & forecasting</b><p data-i18n="c6_p">Budget responsibility, forecasting and consistent use of measurement instruments to monitor success.</p></div>
+      <div class="cap reveal"><b data-i18n="c7_t">Content & key messages</b><p data-i18n="c7_p">Developing event content, storylines and key messages in close collaboration with cross-functional partners.</p></div>
+      <div class="cap reveal"><b data-i18n="c8_t">Operational execution</b><p data-i18n="c8_p">Coordinating with execution and event teams for smooth, efficient delivery — preparation to follow-up.</p></div>
+      <div class="cap reveal"><b data-i18n="c9_t">Results orientation</b><p data-i18n="c9_p">Timely, targeted implementation of all programs, measured with understanding checks and clear KPIs.</p></div>
+    </div>
+    <div class="lang-band reveal">
+      <div class="lang-card"><span class="flag">🇬🇧</span><div><b data-i18n="lang_en_t">English</b><span data-i18n="lang_en_p">Full professional fluency</span></div><div class="bar"><i style="width:100%"></i></div></div>
+      <div class="lang-card"><span class="flag">🇩🇪</span><div><b data-i18n="lang_de_t">German</b><span data-i18n="lang_de_p">C1 — professional working fluency</span></div><div class="bar"><i style="width:88%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
+      <span class="kicker" style="justify-content:center" data-i18n="vid_kicker">On Camera</span>
+      <h2 class="h2" data-i18n="vid_h2">See the work, not just the words</h2>
+      <p class="lead" style="margin:0 auto" data-i18n="vid_lead">Community and webinar moments — because presence is part of the job description.</p>
+    </div>
+    <div class="video-frame reveal">
+      <iframe src="https://www.youtube.com/embed/jbTn5hWfDD0" title="Lutho Kote — community & webinar video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners" id="partners">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto" class="reveal">
+      <span class="kicker" style="justify-content:center" data-i18n="pa_kicker">Partners & Collaborations</span>
+      <h2 class="h2" data-i18n="pa_h2">Organizations I've worked with</h2>
+    </div>
+    <div class="partner-grid reveal">
+      <span class="partner">Fintiba</span>
+      <span class="partner">Goethe-Institut</span>
+      <span class="partner">MAWISTA</span>
+      <span class="partner" data-i18n="pa_embassy">South African Embassy</span>
+      <span class="partner">BARMER</span>
+      <span class="partner">Chancenkarte</span>
+      <span class="partner">HousingAnywhere</span>
+      <span class="partner">Spacest</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="kicker" data-i18n="ct_kicker">Contact</span>
+        <h2 class="h2" data-i18n="ct_h2">Let's build something people belong to.</h2>
+        <p class="lead" style="margin-bottom:36px" data-i18n="ct_lead">Whether you're hiring a Brand or Community Manager, planning a partnership, or want a webinar program that actually converts — I answer personally.</p>
+        <div class="contact-info">
+          <div class="item"><div class="ico">✉️</div><div><b data-i18n="ct_email">Email</b><a href="mailto:lutho.kote@relicom.de">lutho.kote@relicom.de</a></div></div>
+          <div class="item"><div class="ico">💼</div><div><b>LinkedIn</b><a href="https://www.linkedin.com/in/lutho-kote-%F0%9F%9A%80-3617a61a0/" target="_blank" rel="noopener">linkedin.com/in/lutho-kote 🚀</a></div></div>
+          <div class="item"><div class="ico">📍</div><div><b data-i18n="ct_loc">Location</b><span data-i18n="ct_loc_v">Frankfurt am Main, Germany · open to remote</span></div></div>
+          <div class="item"><div class="ico">🗣</div><div><b data-i18n="ct_lang">Languages</b><span data-i18n="ct_lang_v">English · German (C1)</span></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form id="contactForm" novalidate>
+          <div class="row">
+            <div class="field"><label for="f-name" data-i18n="f_name">Name</label><input id="f-name" name="name" type="text" required data-i18n-ph="f_name_ph" placeholder="Your name"></div>
+            <div class="field"><label for="f-email" data-i18n="f_email">Email</label><input id="f-email" name="email" type="email" required data-i18n-ph="f_email_ph" placeholder="you@company.com"></div>
+          </div>
+          <div class="field"><label for="f-company" data-i18n="f_company">Company / Brand</label><input id="f-company" name="company" type="text" data-i18n-ph="f_company_ph" placeholder="Who do you represent?"></div>
+          <div class="field"><label for="f-topic" data-i18n="f_topic">Topic</label>
+            <select id="f-topic" name="topic">
+              <option value="Hiring" data-i18n="f_t1">Hiring / role opportunity</option>
+              <option value="Partnership" data-i18n="f_t2">Partnership or collaboration</option>
+              <option value="Webinar" data-i18n="f_t3">Webinars & events</option>
+              <option value="Community" data-i18n="f_t4">Community & referral programs</option>
+              <option value="Other" data-i18n="f_t5">Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg" data-i18n="f_msg">Message</label><textarea id="f-msg" name="message" rows="5" required data-i18n-ph="f_msg_ph" placeholder="Tell me about your project or role…"></textarea></div>
+          <p class="form-note" data-i18n="f_note">Your message goes directly to my inbox. I typically reply within 48 hours.</p>
+          <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="f_send">Send message</button>
+          <div class="form-success" id="formSuccess" data-i18n="f_ok">Thank you — your message has been sent. I'll get back to you personally.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#" class="logo"><span class="mark">L<span>K</span></span>Lutho Kote</a>
+        <p style="font-size:13.5px;max-width:300px;margin-top:14px" data-i18n="ft_tag">Community & Brand Manager. One person, run like a company.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#company" data-i18n="nav_company">The Company</a>
+        <a href="#org" data-i18n="nav_org">Departments</a>
+        <a href="#programs" data-i18n="nav_programs">Programs</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="https://www.linkedin.com/in/lutho-kote-%F0%9F%9A%80-3617a61a0/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="ft_c">© 2026 Lutho Kote. All rights reserved.</span>
+      <span>
+        <a href="#" id="privacyLink" data-i18n="ft_privacy">Privacy</a> ·
+        <a href="#" id="termsLink" data-i18n="ft_terms">Terms</a> ·
+        <a href="admin.html" style="opacity:.5">Admin</a>
+      </span>
+    </div>
+  </div>
 </footer>
-<!-- Back to Top Button -->
-<button class="back-to-top fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:bg-opacity-90 interactive">
-<i class="ri-arrow-up-line ri-lg"></i>
-</button>
-<!-- Privacy Policy Modal -->
-<div id="privacy-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-lg shadow-lg maxw-lg w-full p-8 relative">
-    <button id="close-privacy" class="absolute top-4 right-4 text-gray-500 hover:text-primary"><i class="ri-close-line ri-lg"></i></button>
-    <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
-    <p class="text-gray-700 mb-2">This is a placeholder for your privacy policy. Please update with your actual privacy practices and data handling information.</p>
+
+<button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+
+<!-- MODALS -->
+<div class="modal" id="privacyModal">
+  <div class="box">
+    <button class="x" data-close>✕</button>
+    <h3 data-i18n="pv_t">Privacy Policy</h3>
+    <p data-i18n="pv_1">This website is the personal branding site of Lutho Kote. When you use the contact form, the data you enter (name, email, company, message) is transmitted by email solely to answer your enquiry. It is not shared with third parties or used for advertising.</p>
+    <p data-i18n="pv_2">This site stores functional preferences (such as your language choice) and anonymous usage statistics locally in your browser (localStorage). No tracking cookies are set and no data is sent to analytics providers.</p>
+    <p data-i18n="pv_3">Embedded content (YouTube) may set its own cookies when played. You can request information about or deletion of your data at any time: lutho.kote@relicom.de.</p>
   </div>
 </div>
-<!-- Terms & Conditions Modal -->
-<div id="terms-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-lg shadow-lg maxw-lg w-full p-8 relative">
-    <button id="close-terms" class="absolute top-4 right-4 text-gray-500 hover:text-primary"><i class="ri-close-line ri-lg"></i></button>
-    <h2 class="text-2xl font-bold mb-4">Terms & Conditions</h2>
-    <p class="text-gray-700 mb-2">This is a placeholder for your terms and conditions. Please update with your actual terms of use and legal information.</p>
+<div class="modal" id="termsModal">
+  <div class="box">
+    <button class="x" data-close>✕</button>
+    <h3 data-i18n="tm_t">Terms of Use</h3>
+    <p data-i18n="tm_1">All content on this website — texts, concepts and images — is the intellectual property of Lutho Kote unless otherwise indicated. Reuse requires prior written consent.</p>
+    <p data-i18n="tm_2">The information on this site describes professional experience and services and does not constitute a binding offer. Liability for external links is excluded; their content is the responsibility of the respective operators.</p>
   </div>
 </div>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-// Custom cursor
-const cursor = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
-if (cursor && cursorOutline) {
-document.addEventListener('mousemove', function(e) {
-cursor.style.left = e.clientX + 'px';
-cursor.style.top = e.clientY + 'px';
-cursorOutline.style.left = e.clientX + 'px';
-cursorOutline.style.top = e.clientY + 'px';
-});
+/* ============ i18n ============ */
+const T = {
+en:{
+  nav_company:"The Company",nav_org:"Departments",nav_programs:"Programs",nav_partner:"Partnerships",nav_caps:"Capabilities",nav_contact:"Contact",nav_cta:"Work with me",
+  bp_kicker:"Brand Partnerships",
+  bp_h2:"One face. Many stages. Your brand's story, told by someone who lived it.",
+  bp_lead:"Great athletes don't just play — they become the trusted face of the brands they believe in. I apply that playbook to international education: fintech, edtech, insurance, housing and language brands serving international students and skilled talent get a bilingual voice their audience already trusts, backed by real program-management muscle.",
+  bp1_t:"Webinar host & moderator",bp1_p:"Your expert content, presented by an experienced webinar lead — concept, storyline, live delivery and follow-up, in English and German.",
+  bp2_t:"Ambassador & referral programs",bp2_p:"I design, launch and run the advocacy engine behind your brand — the same playbook I run at Fintiba, adapted to your audience.",
+  bp3_t:"Campaign face & storyteller",bp3_p:"An authentic international journey your audience recognizes as their own — on camera, on stage and in content that converts trust into action.",
+  bp4_t:"KOL & event partnerships",bp4_p:"Panels, advisory boards, speaker training and opinion-leader networks that position your brand where decisions are made.",
+  bp_cta_t:"Building in international education?",
+  bp_cta_p:"From single-brand players to portfolio holdings consolidating the space — if your growth depends on the trust of international students and skilled talent, let's talk.",
+  bp_cta_b:"Discuss a partnership",
+  hero_badge:"Community & Brand Manager · Frankfurt / Remote",
+  hero_h1:"One person.<br>Run like a <em>company</em>.",
+  hero_sub:"I'm Lutho Kote — Community & Brand Manager with 5 years of experience turning audiences into communities, and communities into measurable growth. Currently leading webinars, the customer referral program and the ambassador program at Fintiba.",
+  hero_cta1:"Explore the company",hero_cta2:"Start a conversation",
+  kpi1:"years in marketing, brand & community",kpi2:"growth programs led at Fintiba",kpi3:"fluent English & German (C1)",kpi4:"departments in one professional",
+  chip1:"Webinar Lead<small>Fintiba</small>",chip2:"Referral & Ambassador<small>Program Manager</small>",chip3:"EN / DE<small>bilingual delivery</small>",
+  mq:["Community Strategy","Webinar Lead @ Fintiba","Referral Programs","Ambassador Networks","KOL Management","Advisory Boards","Speaker Training","Budget & Forecasting","Cross-functional Leadership","English · German (C1)"],
+  co_kicker:"The Company",co_h2:"My brand operates like a business — because it is one.",
+  co_lead:"Five years across marketing, brand and community taught me that a personal brand is not a CV. It is an operating company: strategy, programs, partnerships, content, budgets and results. This site is its annual report.",
+  co_mission_t:"Mission",co_mission_p:"Build communities people genuinely want to belong to — and turn that belonging into brand trust, advocacy and growth that a CFO can see on a dashboard.",
+  p1_t:"Strategy before tactics",p1_p:"Responsibility for developing and implementing brand strategy in peer-to-peer channels — from concept and planning to key initiatives, symposia and speaker training.",
+  p2_t:"Leadership without authority",p2_p:"Cross-functional project leadership across marketing, sales and expert teams — without direct management responsibility, and with full accountability for results.",
+  p3_t:"Evidence, not opinion",p3_p:"Budget responsibility and forecasting, consistent use of measurement instruments, and a results orientation that treats every program as a P&L line.",
+  p4_t:"Complexity, translated",p4_p:"The ability to present scientific and complex content in a way that is right for each audience — in fluent English and German.",
+  org_kicker:"The Org Chart",org_h2:"Six departments. One head-count.",
+  org_lead:"Every function a brand team needs, held by one person. Click a department to open its charter.",
+  org_ceo:"Founder & CEO — Brand of Lutho Kote",d_more:"Open charter ↓",d_less:"Close charter ↑",
+  d1_r:"Head of Community",d1_t:"Community",d1_p:"Building and scaling engaged communities that feel like belonging, not broadcasting.",
+  d1_l1:"Community strategy, engagement programs and moderation at Fintiba",d1_l2:"Maximizing customer engagement through innovative peer-to-peer programs",d1_l3:"Turning satisfied customers into active advocates and ambassadors",
+  d2_r:"Head of Webinars & Events — Lead",d2_t:"Webinars & Events",d2_p:"End-to-end ownership of Fintiba's webinar program: concept, storyline, speakers, execution, follow-up.",
+  d2_l1:"Design of high-quality speaker programs — virtual, face-to-face and on-demand — built for reuse and scale",d2_l2:"Close coordination with execution and event teams for smooth (e)P2P delivery",d2_l3:"Maximizing every event through optimal preparation and follow-up with omni-channel engagement",d2_l4:"Conception and management of advisory boards and speaker training",
+  d3_r:"Head of Growth Programs",d3_t:"Growth Programs",d3_p:"Managing Fintiba's customer referral program and ambassador referral program as growth engines.",
+  d3_l1:"Program design: incentives, journeys and mechanics that make advocacy effortless",d3_l2:"Recruiting, enabling and retaining brand ambassadors",d3_l3:"Consistent measurement — understanding checks, KPIs and program forecasting",
+  d4_r:"Head of Partnerships & KOL",d4_t:"Partnerships & KOL",d4_p:"KOL management and building durable networks with opinion leaders and thought leaders.",
+  d4_l1:"Identifying, engaging and supporting key opinion leaders through innovative (e)P2P programs",d4_l2:"Integrating external experts into concept development on an equal footing",d4_l3:"Advisory boards and scientific events as long-term relationship platforms",
+  d5_r:"Head of Content & Communication",d5_t:"Content & Communication",d5_p:"Developing event content, storylines and key messages — and making complex content land with any audience.",
+  d5_l1:"Presenting scientific content appropriately for each target audience",d5_l2:"Storylines and key messages for events, campaigns and programs",d5_l3:"Bilingual creation and delivery in English and German (C1)",
+  d6_r:"Head of Strategy & Operations",d6_t:"Strategy & Operations",d6_p:"Strategic planning, budget responsibility and the operational discipline that gets programs shipped on time.",
+  d6_l1:"Brand strategy development and implementation in the P2P channel",d6_l2:"Budget responsibility and forecasting across programs",d6_l3:"Timely, targeted implementation with consistent success measurement",d6_l4:"Cross-functional coordination with marketing, sales and medical/expert teams",
+  pr_kicker:"Flagship Programs",pr_h2:"What I'm running right now at Fintiba",pr_lead:"Three live programs, one owner. Real responsibilities — not portfolio filler.",
+  pr1_tag:"LEAD",pr1_t:"Webinar Program",
+  pr1_p:"Leading Fintiba's webinar program end-to-end: concept and storyline, speaker preparation and training, live execution with the event team, and structured follow-up that converts attention into engagement. Designed for reuse — every format scales from local to regional.",
+  pr1_f1:"Program lead",pr1_f2:"Virtual · hybrid · on-demand",pr1_f3:"Speaker training",pr1_f4:"EN / DE delivery",
+  pr2_tag:"GROWTH",pr2_t:"Customer Referral Program",
+  pr2_p:"Managing the program that turns satisfied Fintiba customers into a measurable acquisition channel — owning the journey, the incentives, the communication and the numbers behind it.",
+  pr2_f1:"Program management",pr2_f2:"Incentive & journey design",pr2_f3:"KPI ownership",
+  pr3_tag:"COMMUNITY",pr3_t:"Ambassador Referral Program",
+  pr3_p:"Building and managing Fintiba's ambassador network: recruiting authentic voices from the community, enabling them with content and training, and turning peer trust into sustainable brand reach.",
+  pr3_f1:"Ambassador recruitment",pr3_f2:"Enablement & training",pr3_f3:"Peer-to-peer advocacy",
+  cap_kicker:"Capabilities",cap_h2:"The full stack of a modern brand team",cap_lead:"Skills proven in the field — in peer-to-peer programs, events and cross-functional projects.",
+  c1_t:"Scientific storytelling",c1_p:"Presenting scientific and complex content in a way that is appropriate — and compelling — for each target audience.",
+  c2_t:"KOL management",c2_p:"Building networks with opinion leaders and promoting thought-leader support through innovative (e)P2P programs.",
+  c3_t:"Cross-functional leadership",c3_p:"Leading projects across marketing, sales and expert teams — without direct management responsibility.",
+  c4_t:"Program design",c4_p:"High-quality speaker programs — virtual, face-to-face and on-demand — designed for reuse and scalability.",
+  c5_t:"Advisory boards & training",c5_p:"Conception and management of advisory boards and speaker training for continuous program development.",
+  c6_t:"Budget & forecasting",c6_p:"Budget responsibility, forecasting and consistent use of measurement instruments to monitor success.",
+  c7_t:"Content & key messages",c7_p:"Developing event content, storylines and key messages in close collaboration with cross-functional partners.",
+  c8_t:"Operational execution",c8_p:"Coordinating with execution and event teams for smooth, efficient delivery — preparation to follow-up.",
+  c9_t:"Results orientation",c9_p:"Timely, targeted implementation of all programs, measured with understanding checks and clear KPIs.",
+  lang_en_t:"English",lang_en_p:"Full professional fluency",lang_de_t:"German",lang_de_p:"C1 — professional working fluency",
+  vid_kicker:"On Camera",vid_h2:"See the work, not just the words",vid_lead:"Community and webinar moments — because presence is part of the job description.",
+  pa_kicker:"Partners & Collaborations",pa_h2:"Organizations I've worked with",pa_embassy:"South African Embassy",
+  ct_kicker:"Contact",ct_h2:"Let's build something people belong to.",
+  ct_lead:"Whether you're hiring a Brand or Community Manager, planning a partnership, or want a webinar program that actually converts — I answer personally.",
+  ct_email:"Email",ct_loc:"Location",ct_loc_v:"Frankfurt am Main, Germany · open to remote",ct_lang:"Languages",ct_lang_v:"English · German (C1)",
+  f_name:"Name",f_name_ph:"Your name",f_email:"Email",f_email_ph:"you@company.com",f_company:"Company / Brand",f_company_ph:"Who do you represent?",
+  f_topic:"Topic",f_t1:"Hiring / role opportunity",f_t2:"Partnership or collaboration",f_t3:"Webinars & events",f_t4:"Community & referral programs",f_t5:"Something else",
+  f_msg:"Message",f_msg_ph:"Tell me about your project or role…",
+  f_note:"Your message goes directly to my inbox. I typically reply within 48 hours.",
+  f_send:"Send message",f_sending:"Sending…",f_ok:"Thank you — your message has been sent. I'll get back to you personally.",
+  f_err:"Something went wrong. Please email me directly at lutho.kote@relicom.de.",
+  ft_tag:"Community & Brand Manager. One person, run like a company.",ft_c:"© 2026 Lutho Kote. All rights reserved.",ft_privacy:"Privacy",ft_terms:"Terms",
+  pv_t:"Privacy Policy",
+  pv_1:"This website is the personal branding site of Lutho Kote. When you use the contact form, the data you enter (name, email, company, message) is transmitted by email solely to answer your enquiry. It is not shared with third parties or used for advertising.",
+  pv_2:"This site stores functional preferences (such as your language choice) and anonymous usage statistics locally in your browser (localStorage). No tracking cookies are set and no data is sent to analytics providers.",
+  pv_3:"Embedded content (YouTube) may set its own cookies when played. You can request information about or deletion of your data at any time: lutho.kote@relicom.de.",
+  tm_t:"Terms of Use",
+  tm_1:"All content on this website — texts, concepts and images — is the intellectual property of Lutho Kote unless otherwise indicated. Reuse requires prior written consent.",
+  tm_2:"The information on this site describes professional experience and services and does not constitute a binding offer. Liability for external links is excluded; their content is the responsibility of the respective operators."
+},
+de:{
+  nav_company:"Das Unternehmen",nav_org:"Abteilungen",nav_programs:"Programme",nav_partner:"Partnerschaften",nav_caps:"Kompetenzen",nav_contact:"Kontakt",nav_cta:"Zusammenarbeiten",
+  bp_kicker:"Markenpartnerschaften",
+  bp_h2:"Ein Gesicht. Viele Bühnen. Ihre Markengeschichte — erzählt von jemandem, der sie gelebt hat.",
+  bp_lead:"Große Sportler spielen nicht nur — sie werden zum vertrauenswürdigen Gesicht der Marken, an die sie glauben. Dieses Playbook übertrage ich auf International Education: Fintech-, Edtech-, Versicherungs-, Wohnungs- und Sprachlernmarken für internationale Studierende und Fachkräfte erhalten eine zweisprachige Stimme, der ihre Zielgruppe bereits vertraut — mit echter Programm-Management-Substanz dahinter.",
+  bp1_t:"Webinar-Host & Moderator",bp1_p:"Ihre Experteninhalte, präsentiert von einem erfahrenen Webinar-Lead — Konzept, Storyline, Live-Durchführung und Nachbereitung, auf Englisch und Deutsch.",
+  bp2_t:"Ambassador- & Empfehlungsprogramme",bp2_p:"Ich konzipiere, starte und steuere den Advocacy-Motor hinter Ihrer Marke — dasselbe Playbook, das ich bei Fintiba fahre, angepasst an Ihre Zielgruppe.",
+  bp3_t:"Kampagnengesicht & Storyteller",bp3_p:"Eine authentische internationale Geschichte, in der sich Ihre Zielgruppe wiedererkennt — vor der Kamera, auf der Bühne und in Content, der Vertrauen in Handlung verwandelt.",
+  bp4_t:"KOL- & Event-Partnerschaften",bp4_p:"Panels, Advisory Boards, Referententrainings und Meinungsbildner-Netzwerke, die Ihre Marke dort positionieren, wo Entscheidungen fallen.",
+  bp_cta_t:"Sie bauen etwas in International Education auf?",
+  bp_cta_p:"Vom Einzelplayer bis zur Beteiligungsholding, die den Markt konsolidiert — wenn Ihr Wachstum vom Vertrauen internationaler Studierender und Fachkräfte abhängt, lassen Sie uns sprechen.",
+  bp_cta_b:"Partnerschaft besprechen",
+  hero_badge:"Community & Brand Manager · Frankfurt / Remote",
+  hero_h1:"Eine Person.<br>Geführt wie ein <em>Unternehmen</em>.",
+  hero_sub:"Ich bin Lutho Kote — Community & Brand Manager mit 5 Jahren Erfahrung darin, aus Zielgruppen Communities zu machen und aus Communities messbares Wachstum. Aktuell leite ich bei Fintiba die Webinare, das Kunden-Empfehlungsprogramm und das Ambassador-Programm.",
+  hero_cta1:"Unternehmen entdecken",hero_cta2:"Gespräch starten",
+  kpi1:"Jahre in Marketing, Brand & Community",kpi2:"Wachstumsprogramme bei Fintiba geleitet",kpi3:"fließend Englisch & Deutsch (C1)",kpi4:"Abteilungen in einer Person",
+  chip1:"Webinar-Lead<small>Fintiba</small>",chip2:"Referral & Ambassador<small>Programm-Manager</small>",chip3:"EN / DE<small>zweisprachige Umsetzung</small>",
+  mq:["Community-Strategie","Webinar-Lead @ Fintiba","Empfehlungsprogramme","Ambassador-Netzwerke","KOL-Management","Advisory Boards","Referententraining","Budget & Forecasting","Bereichsübergreifende Führung","Englisch · Deutsch (C1)"],
+  co_kicker:"Das Unternehmen",co_h2:"Meine Marke arbeitet wie ein Unternehmen — weil sie eines ist.",
+  co_lead:"Fünf Jahre in Marketing, Brand und Community haben mich gelehrt: Eine Personal Brand ist kein Lebenslauf. Sie ist ein operatives Unternehmen — mit Strategie, Programmen, Partnerschaften, Content, Budgets und Ergebnissen. Diese Website ist ihr Geschäftsbericht.",
+  co_mission_t:"Mission",co_mission_p:"Communities aufbauen, zu denen Menschen wirklich gehören wollen — und diese Zugehörigkeit in Markenvertrauen, Fürsprache und Wachstum verwandeln, das auch ein CFO auf dem Dashboard sieht.",
+  p1_t:"Strategie vor Taktik",p1_p:"Verantwortung für die Entwicklung und Umsetzung der Markenstrategie im Peer-to-Peer-Kanal — von der Konzeption über Schlüsselinitiativen bis zu Symposien und Referententrainings.",
+  p2_t:"Führung ohne Weisungsbefugnis",p2_p:"Bereichsübergreifende Projektleitung über Marketing, Vertrieb und Fachabteilungen hinweg — ohne direkte Führungsverantwortung, mit voller Ergebnisverantwortung.",
+  p3_t:"Evidenz statt Meinung",p3_p:"Budgetverantwortung und Forecasting, konsequenter Einsatz von Messinstrumenten und eine Ergebnisorientierung, die jedes Programm wie eine P&L-Position behandelt.",
+  p4_t:"Komplexität, übersetzt",p4_p:"Die Fähigkeit, wissenschaftliche und komplexe Inhalte zielgruppengerecht aufzubereiten — fließend auf Englisch und Deutsch.",
+  org_kicker:"Das Organigramm",org_h2:"Sechs Abteilungen. Ein Mitarbeiter.",
+  org_lead:"Jede Funktion, die ein Brand-Team braucht — vereint in einer Person. Klicken Sie auf eine Abteilung, um ihr Mandat zu öffnen.",
+  org_ceo:"Gründer & CEO — Marke Lutho Kote",d_more:"Mandat öffnen ↓",d_less:"Mandat schließen ↑",
+  d1_r:"Head of Community",d1_t:"Community",d1_p:"Aufbau und Skalierung engagierter Communities, die sich nach Zugehörigkeit anfühlen — nicht nach Beschallung.",
+  d1_l1:"Community-Strategie, Engagement-Programme und Moderation bei Fintiba",d1_l2:"Maximierung des Kunden-Engagements durch innovative Peer-to-Peer-Programme",d1_l3:"Zufriedene Kunden zu aktiven Fürsprechern und Botschaftern machen",
+  d2_r:"Head of Webinars & Events — Lead",d2_t:"Webinare & Events",d2_p:"End-to-End-Verantwortung für Fintibas Webinar-Programm: Konzept, Storyline, Referenten, Durchführung, Nachbereitung.",
+  d2_l1:"Entwicklung hochwertiger Referentenprogramme — virtuell, in Präsenz und on-demand — ausgelegt auf Wiederverwendung und Skalierbarkeit",d2_l2:"Enge Abstimmung mit Execution- und Event-Teams für reibungslose (e)P2P-Durchführung",d2_l3:"Maximierung jedes Events durch optimale Vor- und Nachbereitung mit Omni-Channel-Engagement",d2_l4:"Konzeption und Leitung von Advisory Boards und Referententrainings",
+  d3_r:"Head of Growth Programs",d3_t:"Wachstumsprogramme",d3_p:"Verantwortung für Fintibas Kunden-Empfehlungsprogramm und Ambassador-Programm als Wachstumsmotoren.",
+  d3_l1:"Programmdesign: Anreize, Journeys und Mechaniken, die Weiterempfehlung mühelos machen",d3_l2:"Gewinnung, Befähigung und Bindung von Markenbotschaftern",d3_l3:"Konsequente Erfolgsmessung — Verständnischecks, KPIs und Programm-Forecasting",
+  d4_r:"Head of Partnerships & KOL",d4_t:"Partnerschaften & KOL",d4_p:"KOL-Management und Aufbau belastbarer Netzwerke mit Meinungsbildnern und Thought Leadern.",
+  d4_l1:"Identifikation, Einbindung und Förderung von Key Opinion Leadern durch innovative (e)P2P-Programme",d4_l2:"Einbindung externer Expertinnen und Experten in die Konzeptentwicklung auf Augenhöhe",d4_l3:"Advisory Boards und wissenschaftliche Veranstaltungen als langfristige Beziehungsplattformen",
+  d5_r:"Head of Content & Communication",d5_t:"Content & Kommunikation",d5_p:"Entwicklung von Event-Inhalten, Storylines und Kernbotschaften — und komplexe Inhalte, die bei jeder Zielgruppe ankommen.",
+  d5_l1:"Zielgruppengerechte Aufbereitung wissenschaftlicher Inhalte",d5_l2:"Storylines und Kernbotschaften für Events, Kampagnen und Programme",d5_l3:"Zweisprachige Erstellung und Umsetzung auf Englisch und Deutsch (C1)",
+  d6_r:"Head of Strategy & Operations",d6_t:"Strategie & Operations",d6_p:"Strategische Planung, Budgetverantwortung und die operative Disziplin, mit der Programme pünktlich live gehen.",
+  d6_l1:"Entwicklung und Umsetzung der Markenstrategie im P2P-Kanal",d6_l2:"Budgetverantwortung und Forecasting über alle Programme hinweg",d6_l3:"Termingerechte, zielgerichtete Umsetzung mit konsequenter Erfolgsmessung",d6_l4:"Bereichsübergreifende Koordination mit Marketing, Vertrieb und Fachabteilungen",
+  pr_kicker:"Flaggschiff-Programme",pr_h2:"Was ich aktuell bei Fintiba verantworte",pr_lead:"Drei laufende Programme, eine verantwortliche Person. Echte Verantwortung — kein Portfolio-Füllmaterial.",
+  pr1_tag:"LEAD",pr1_t:"Webinar-Programm",
+  pr1_p:"Leitung des Fintiba-Webinar-Programms von A bis Z: Konzept und Storyline, Vorbereitung und Training der Referenten, Live-Durchführung mit dem Event-Team und strukturierte Nachbereitung, die Aufmerksamkeit in Engagement verwandelt. Auf Wiederverwendung ausgelegt — jedes Format skaliert von lokal bis regional.",
+  pr1_f1:"Programmleitung",pr1_f2:"Virtuell · hybrid · on-demand",pr1_f3:"Referententraining",pr1_f4:"Umsetzung EN / DE",
+  pr2_tag:"WACHSTUM",pr2_t:"Kunden-Empfehlungsprogramm",
+  pr2_p:"Verantwortung für das Programm, das zufriedene Fintiba-Kunden in einen messbaren Akquisekanal verwandelt — inklusive Journey, Anreizen, Kommunikation und den Zahlen dahinter.",
+  pr2_f1:"Programm-Management",pr2_f2:"Anreiz- & Journey-Design",pr2_f3:"KPI-Verantwortung",
+  pr3_tag:"COMMUNITY",pr3_t:"Ambassador-Programm",
+  pr3_p:"Aufbau und Steuerung des Fintiba-Ambassador-Netzwerks: authentische Stimmen aus der Community gewinnen, mit Content und Training befähigen und Peer-Vertrauen in nachhaltige Markenreichweite verwandeln.",
+  pr3_f1:"Ambassador-Gewinnung",pr3_f2:"Befähigung & Training",pr3_f3:"Peer-to-Peer-Fürsprache",
+  cap_kicker:"Kompetenzen",cap_h2:"Der komplette Werkzeugkasten eines modernen Brand-Teams",cap_lead:"Fähigkeiten, bewiesen in der Praxis — in Peer-to-Peer-Programmen, Events und bereichsübergreifenden Projekten.",
+  c1_t:"Wissenschaftliches Storytelling",c1_p:"Wissenschaftliche und komplexe Inhalte zielgruppengerecht — und überzeugend — aufbereiten.",
+  c2_t:"KOL-Management",c2_p:"Netzwerke mit Meinungsbildnern aufbauen und Thought-Leader-Unterstützung durch innovative (e)P2P-Programme fördern.",
+  c3_t:"Bereichsübergreifende Führung",c3_p:"Projekte über Marketing, Vertrieb und Fachabteilungen hinweg leiten — ohne direkte Führungsverantwortung.",
+  c4_t:"Programmdesign",c4_p:"Hochwertige Referentenprogramme — virtuell, in Präsenz und on-demand — ausgelegt auf Wiederverwendung und Skalierbarkeit.",
+  c5_t:"Advisory Boards & Trainings",c5_p:"Konzeption und Leitung von Advisory Boards sowie Referententrainings zur kontinuierlichen Weiterentwicklung der Programme.",
+  c6_t:"Budget & Forecasting",c6_p:"Budgetverantwortung, Forecasting und konsequenter Einsatz von Messinstrumenten zur Erfolgskontrolle.",
+  c7_t:"Content & Kernbotschaften",c7_p:"Entwicklung von Event-Inhalten, Storylines und Kernbotschaften in enger Zusammenarbeit mit bereichsübergreifenden Partnern.",
+  c8_t:"Operative Umsetzung",c8_p:"Abstimmung mit Execution- und Event-Teams für reibungslose, effiziente Durchführung — von der Vorbereitung bis zur Nachbereitung.",
+  c9_t:"Ergebnisorientierung",c9_p:"Termingerechte, zielgerichtete Umsetzung aller Programme, gemessen mit Verständnischecks und klaren KPIs.",
+  lang_en_t:"Englisch",lang_en_p:"Verhandlungssicher",lang_de_t:"Deutsch",lang_de_p:"C1 — fließend im Berufsalltag",
+  vid_kicker:"Vor der Kamera",vid_h2:"Die Arbeit sehen, nicht nur die Worte",vid_lead:"Community- und Webinar-Momente — denn Präsenz gehört zur Stellenbeschreibung.",
+  pa_kicker:"Partner & Kooperationen",pa_h2:"Organisationen, mit denen ich gearbeitet habe",pa_embassy:"Südafrikanische Botschaft",
+  ct_kicker:"Kontakt",ct_h2:"Lassen Sie uns etwas bauen, zu dem Menschen gehören wollen.",
+  ct_lead:"Ob Sie einen Brand- oder Community-Manager suchen, eine Partnerschaft planen oder ein Webinar-Programm wollen, das wirklich konvertiert — ich antworte persönlich.",
+  ct_email:"E-Mail",ct_loc:"Standort",ct_loc_v:"Frankfurt am Main, Deutschland · offen für Remote",ct_lang:"Sprachen",ct_lang_v:"Englisch · Deutsch (C1)",
+  f_name:"Name",f_name_ph:"Ihr Name",f_email:"E-Mail",f_email_ph:"sie@unternehmen.de",f_company:"Unternehmen / Marke",f_company_ph:"Wen vertreten Sie?",
+  f_topic:"Thema",f_t1:"Recruiting / Stellenangebot",f_t2:"Partnerschaft oder Kooperation",f_t3:"Webinare & Events",f_t4:"Community & Empfehlungsprogramme",f_t5:"Etwas anderes",
+  f_msg:"Nachricht",f_msg_ph:"Erzählen Sie mir von Ihrem Projekt oder Ihrer Rolle …",
+  f_note:"Ihre Nachricht landet direkt in meinem Posteingang. Ich antworte in der Regel innerhalb von 48 Stunden.",
+  f_send:"Nachricht senden",f_sending:"Wird gesendet …",f_ok:"Vielen Dank — Ihre Nachricht wurde gesendet. Ich melde mich persönlich bei Ihnen.",
+  f_err:"Etwas ist schiefgelaufen. Bitte schreiben Sie mir direkt an lutho.kote@relicom.de.",
+  ft_tag:"Community & Brand Manager. Eine Person, geführt wie ein Unternehmen.",ft_c:"© 2026 Lutho Kote. Alle Rechte vorbehalten.",ft_privacy:"Datenschutz",ft_terms:"Nutzungsbedingungen",
+  pv_t:"Datenschutzerklärung",
+  pv_1:"Diese Website ist die Personal-Branding-Seite von Lutho Kote. Wenn Sie das Kontaktformular nutzen, werden die eingegebenen Daten (Name, E-Mail, Unternehmen, Nachricht) ausschließlich zur Beantwortung Ihrer Anfrage per E-Mail übermittelt. Sie werden nicht an Dritte weitergegeben oder zu Werbezwecken verwendet.",
+  pv_2:"Diese Seite speichert funktionale Einstellungen (z. B. Ihre Sprachwahl) und anonyme Nutzungsstatistiken lokal in Ihrem Browser (localStorage). Es werden keine Tracking-Cookies gesetzt und keine Daten an Analyseanbieter übertragen.",
+  pv_3:"Eingebettete Inhalte (YouTube) können beim Abspielen eigene Cookies setzen. Auskunft über oder Löschung Ihrer Daten können Sie jederzeit anfordern: lutho.kote@relicom.de.",
+  tm_t:"Nutzungsbedingungen",
+  tm_1:"Alle Inhalte dieser Website — Texte, Konzepte und Bilder — sind geistiges Eigentum von Lutho Kote, sofern nicht anders gekennzeichnet. Eine Weiterverwendung bedarf der vorherigen schriftlichen Zustimmung.",
+  tm_2:"Die Informationen auf dieser Seite beschreiben Berufserfahrung und Leistungen und stellen kein verbindliches Angebot dar. Für externe Links wird keine Haftung übernommen; für deren Inhalte sind die jeweiligen Betreiber verantwortlich."
+}};
+
+let lang = localStorage.getItem('lk_lang') || 'en';
+function applyLang(l){
+  lang = l; localStorage.setItem('lk_lang', l);
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.getAttribute('data-i18n'); if(T[l][k]!==undefined) el.textContent=T[l][k]; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{ const k=el.getAttribute('data-i18n-html'); if(T[l][k]!==undefined) el.innerHTML=T[l][k]; });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const k=el.getAttribute('data-i18n-ph'); if(T[l][k]!==undefined) el.placeholder=T[l][k]; });
+  ['lang-en','m-lang-en'].forEach(id=>{const b=document.getElementById(id); if(b) b.classList.toggle('active',l==='en');});
+  ['lang-de','m-lang-de'].forEach(id=>{const b=document.getElementById(id); if(b) b.classList.toggle('active',l==='de');});
+  buildMarquee();
+  track('langSwitches');
 }
-// Interactive elements hover effect
-const interactiveElements = document.querySelectorAll('.interactive');
-interactiveElements.forEach(element => {
-element.addEventListener('mouseenter', function() {
-if (cursorOutline) {
-cursorOutline.style.width = '60px';
-cursorOutline.style.height = '60px';
-cursorOutline.style.backgroundColor = 'rgba(51, 51, 51, 0.05)';
+['lang-en','m-lang-en'].forEach(id=>{const b=document.getElementById(id); if(b) b.onclick=()=>applyLang('en');});
+['lang-de','m-lang-de'].forEach(id=>{const b=document.getElementById(id); if(b) b.onclick=()=>applyLang('de');});
+
+/* marquee */
+function buildMarquee(){
+  const items = T[lang].mq;
+  const t = document.getElementById('marqueeTrack');
+  t.innerHTML = [...items,...items].map(x=>`<span>◆&nbsp; ${x}</span>`).join('');
 }
-});
-element.addEventListener('mouseleave', function() {
-if (cursorOutline) {
-cursorOutline.style.width = '40px';
-cursorOutline.style.height = '40px';
-cursorOutline.style.backgroundColor = 'transparent';
+
+/* ============ analytics (local, anonymous) ============ */
+function getA(){ try{return JSON.parse(localStorage.getItem('lk_analytics'))||{}}catch(e){return{}} }
+function setA(a){ localStorage.setItem('lk_analytics', JSON.stringify(a)); }
+function track(key, sub){
+  const a = getA();
+  if(sub){ a[key]=a[key]||{}; a[key][sub]=(a[key][sub]||0)+1; }
+  else a[key]=(a[key]||0)+1;
+  a.lastActivity = new Date().toISOString();
+  setA(a);
 }
+track('visits');
+
+/* section view tracking */
+const seen = new Set();
+const secObs = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting && !seen.has(e.target.id)){ seen.add(e.target.id); track('sectionViews', e.target.id); }
+}),{threshold:.3});
+document.querySelectorAll('section[id]').forEach(s=>secObs.observe(s));
+
+/* ============ UI behaviour ============ */
+const header = document.getElementById('header');
+window.addEventListener('scroll',()=>{
+  header.classList.toggle('scrolled', scrollY>40);
+  document.getElementById('topBtn').classList.toggle('show', scrollY>500);
 });
+document.getElementById('topBtn').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* mobile menu */
+const mm = document.getElementById('mobileMenu');
+document.getElementById('burger').onclick=()=>mm.classList.add('open');
+document.getElementById('closeMenu').onclick=()=>mm.classList.remove('open');
+mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));
+
+/* reveal on scroll */
+const rObs = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); rObs.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rObs.observe(el));
+
+/* KPI counters */
+const cObs = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target, end=+el.dataset.count; let cur=0;
+  const step=()=>{ cur+=Math.max(1,Math.ceil(end/30)); if(cur>=end){el.textContent=end+'+';} else {el.textContent=cur; requestAnimationFrame(step);} };
+  step(); cObs.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
+
+/* org chart accordions */
+document.querySelectorAll('[data-dept]').forEach(d=>{
+  d.addEventListener('click',()=>{
+    const open = d.classList.toggle('open');
+    d.querySelector('.more').textContent = T[lang][open?'d_less':'d_more'];
+    track('deptOpens', d.querySelector('h3').textContent);
+  });
 });
-// Fade in animations
-const fadeElements = document.querySelectorAll('.fade-in');
-const fadeInObserver = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-fadeInObserver.unobserve(entry.target);
+
+/* webinar slider */
+(function(){
+  const s=document.getElementById('webinarSlider'); if(!s) return;
+  const imgs=[...s.querySelectorAll('img')], dots=[...s.querySelectorAll('.dots i')]; let i=0;
+  function show(n){ imgs[i].classList.remove('on'); dots[i].classList.remove('on'); i=n%imgs.length; imgs[i].classList.add('on'); dots[i].classList.add('on'); }
+  setInterval(()=>show(i+1),4500);
+  dots.forEach((d,n)=>d.onclick=e=>{e.stopPropagation();show(n);});
+})();
+
+/* modals */
+function bindModal(linkId, modalId){
+  const m=document.getElementById(modalId);
+  document.getElementById(linkId).onclick=e=>{e.preventDefault();m.classList.add('show');};
+  m.querySelector('[data-close]').onclick=()=>m.classList.remove('show');
+  m.onclick=e=>{ if(e.target===m) m.classList.remove('show'); };
 }
-});
-}, {
-threshold: 0.1
-});
-fadeElements.forEach(element => {
-fadeInObserver.observe(element);
-});
-// Back to top button
-const backToTopButton = document.querySelector('.back-to-top');
-window.addEventListener('scroll', function() {
-if (window.pageYOffset > 300) {
-backToTopButton.classList.add('visible');
-} else {
-backToTopButton.classList.remove('visible');
-}
-});
-backToTopButton.addEventListener('click', function() {
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});
-// Mobile menu
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const closeMenuButton = document.getElementById('close-menu-button');
-const mobileMenu = document.querySelector('.mobile-menu');
-const mobileLinks = document.querySelectorAll('.mobile-link');
-mobileMenuButton.addEventListener('click', function() {
-mobileMenu.classList.add('open');
-});
-closeMenuButton.addEventListener('click', function() {
-mobileMenu.classList.remove('open');
-});
-mobileLinks.forEach(link => {
-link.addEventListener('click', function() {
-mobileMenu.classList.remove('open');
-});
-});
-// Portfolio filtering
-const portfolioFilters = document.querySelectorAll('.portfolio-filter');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-portfolioFilters.forEach(filter => {
-filter.addEventListener('click', function() {
-// Remove active class from all filters
-portfolioFilters.forEach(f => f.classList.remove('active', 'bg-primary', 'text-white'));
-portfolioFilters.forEach(f => f.classList.add('bg-gray-100', 'dark:bg-gray-800'));
-// Add active class to clicked filter
-this.classList.add('active', 'bg-primary', 'text-white');
-this.classList.remove('bg-gray-100', 'dark:bg-gray-800');
-const filterValue = this.getAttribute('data-filter');
-portfolioItems.forEach(item => {
-if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-item.style.display = 'block';
-} else {
-item.style.display = 'none';
-}
-});
-});
-});
-// Focus mode toggle
-const focusToggle = document.getElementById('focus-toggle');
-const mobileFocusToggle = document.getElementById('mobile-focus-toggle');
-const portfolioSection = document.getElementById('work');
-// Check for saved focus preference
-const savedFocus = localStorage.getItem('focus');
-if (savedFocus === 'brand') {
-portfolioSection.classList.add('brand-focus');
-focusToggle.checked = true;
-mobileFocusToggle.checked = true;
-} else {
-portfolioSection.classList.remove('brand-focus');
-focusToggle.checked = false;
-mobileFocusToggle.checked = false;
-}
-function toggleFocus() {
-portfolioSection.classList.toggle('brand-focus');
-if (portfolioSection.classList.contains('brand-focus')) {
-localStorage.setItem('focus', 'brand');
-} else {
-localStorage.setItem('focus', 'community');
-}
-}
-focusToggle.addEventListener('change', function() {
-toggleFocus();
-mobileFocusToggle.checked = this.checked;
-});
-mobileFocusToggle.addEventListener('change', function() {
-toggleFocus();
-focusToggle.checked = this.checked;
-});
-// Animated text
-const animatedText = document.getElementById('animated-text');
-if (animatedText) {
-const text = animatedText.textContent;
-animatedText.textContent = '';
-for (let i = 0; i < text.length; i++) {
-const span = document.createElement('span');
-span.textContent = text[i];
-span.style.opacity = '0';
-span.style.transition = `opacity 0.3s ease ${i * 0.05}s`;
-animatedText.appendChild(span);
-}
-setTimeout(() => {
-const spans = animatedText.querySelectorAll('span');
-spans.forEach(span => {
-span.style.opacity = '1';
-});
-}, 500);
-}
-// Language toggle logic
-const translations = {
-  de: {
-    about: 'Über mich',
-    work: 'Arbeit',
-    contact: 'Kontakt',
-    // Add more keys as needed
-  },
-  en: {
-    about: 'About',
-    work: 'Work',
-    contact: 'Contact',
-    // Add more keys as needed
+bindModal('privacyLink','privacyModal');
+bindModal('termsLink','termsModal');
+
+/* ============ contact form: email via FormSubmit + local CRM log ============ */
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const f=this, btn=document.getElementById('submitBtn'), ok=document.getElementById('formSuccess');
+  if(!f.name.value.trim() || !f.email.value.trim() || !f.message.value.trim()){ f.reportValidity(); return; }
+  btn.textContent=T[lang].f_sending; btn.disabled=true;
+  const lead={ name:f.name.value.trim(), email:f.email.value.trim(), company:f.company.value.trim(), topic:f.topic.value, message:f.message.value.trim(), lang, date:new Date().toISOString(), source:'website' };
+  /* local CRM log */
+  try{ const L=JSON.parse(localStorage.getItem('lk_leads')||'[]'); L.unshift(lead); localStorage.setItem('lk_leads',JSON.stringify(L)); }catch(err){}
+  /* email delivery */
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/lutho.kote@relicom.de',{
+      method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({name:lead.name,email:lead.email,company:lead.company,topic:lead.topic,message:lead.message,_subject:'New lead from lutho-kote.com — '+lead.topic})
+    });
+    if(!r.ok) throw 0;
+    ok.style.display='block'; ok.textContent=T[lang].f_ok; f.reset(); track('leadsSubmitted');
+  }catch(err){
+    ok.style.display='block'; ok.style.background='#FDECEC'; ok.style.borderColor='#F2A4A4'; ok.style.color='#991B1B'; ok.textContent=T[lang].f_err;
   }
-};
-let currentLang = 'en';
-const langToggle = document.getElementById('lang-toggle');
-function updateLanguage(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-  langToggle.textContent = lang === 'en' ? 'DE' : 'EN';
-  currentLang = lang;
-}
-langToggle.addEventListener('click', function() {
-  updateLanguage(currentLang === 'en' ? 'de' : 'en');
+  btn.textContent=T[lang].f_send; btn.disabled=false;
 });
-// Set initial language
-updateLanguage(currentLang);
-// SwiperJS for Webinars
-if (document.querySelector('.webinars-swiper')) {
-  new Swiper('.webinars-swiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-}
-// Privacy Policy and Terms modal logic
-const privacyLink = document.getElementById('privacy-link');
-const termsLink = document.getElementById('terms-link');
-const privacyModal = document.getElementById('privacy-modal');
-const termsModal = document.getElementById('terms-modal');
-const closePrivacy = document.getElementById('close-privacy');
-const closeTerms = document.getElementById('close-terms');
-privacyLink.addEventListener('click', function(e) {
-  e.preventDefault();
-  privacyModal.classList.remove('hidden');
-});
-termsLink.addEventListener('click', function(e) {
-  e.preventDefault();
-  termsModal.classList.remove('hidden');
-});
-closePrivacy.addEventListener('click', function() {
-  privacyModal.classList.add('hidden');
-});
-closeTerms.addEventListener('click', function() {
-  termsModal.classList.add('hidden');
-});
-// Close modals on outside click
-privacyModal.addEventListener('click', function(e) {
-  if (e.target === privacyModal) privacyModal.classList.add('hidden');
-});
-termsModal.addEventListener('click', function(e) {
-  if (e.target === termsModal) termsModal.classList.add('hidden');
-});
-});
+
+/* init */
+applyLang(lang);
 </script>
 </body>
-</html> 
+</html>
