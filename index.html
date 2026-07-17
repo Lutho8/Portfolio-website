@@ -935,6 +935,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
   btn.textContent=T[lang].f_send; btn.disabled=false;
 });
 
+/* image fallbacks (until real photos are uploaded) */
+const MONO='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><rect width="400" height="500" fill="#101A3E"/><circle cx="200" cy="185" r="72" fill="none" stroke="#2563EB" stroke-width="3" opacity=".6"/><text x="200" y="215" font-size="84" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" fill="#7FB2FF">LK</text><text x="200" y="330" font-size="22" font-family="Arial,sans-serif" text-anchor="middle" fill="rgba(255,255,255,.55)">Lutho Kote</text><text x="200" y="360" font-size="15" font-family="Arial,sans-serif" text-anchor="middle" fill="rgba(255,255,255,.35)">Community %26 Brand Manager</text></svg>');
+document.querySelectorAll('img').forEach(img=>{
+  const fix=()=>{ if((img.getAttribute('src')||'').includes('portrait')){ img.src=MONO; } else { img.style.display='none'; } };
+  img.addEventListener('error',fix,{once:true});
+  if(img.complete && img.naturalWidth===0 && img.getAttribute('src') && !img.src.startsWith('data:')) fix();
+});
+
 /* init */
 applyLang(lang);
 </script>
